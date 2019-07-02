@@ -84,10 +84,10 @@ The resources provided by the API are accessed via unique paths appended to the 
 | GET         | `/api`                        | General API metadata.     |
 | GET         | `/api/v0.5`                   | List of places and associated metadata.**\*** |
 | GET         | `/api/v0.5/{id}`              | Metadata associated with an individual place. |
-| GET         | `/api/v0.5/administrative-units` | Reference list of metadata associated with [Irish administrative units](https://www.logainm.ie/en/inf/help-categs). |
-| GET         | `/api/v0.5/features`          | Reference list of metadata associated with toponymic features. |
-| GET         | `/api/v0.5/glossary`          | Reference list of [words commonly found in Irish placenames](https://www.logainm.ie/en/gls/) and associated metadata. |
-| GET         | `/api/v0.5/counties`          | Reference list of metadata associated with counties. |
+| GET         | `/api/v0.5/administrative-units` | Reference list of metadata associated with [Irish administrative units](https://www.logainm.ie/en/inf/help-categs). The unit identifers in this list can be used to filter the places endpoint by `TypeID`. |
+| GET         | `/api/v0.5/features`          | Reference list of metadata associated with toponymic features. The feature identifers in this list can be used to filter the places endpoint by `TypeID`. |
+| GET         | `/api/v0.5/glossary`          | Reference list of [words commonly found in Irish placenames](https://www.logainm.ie/en/gls/) and associated metadata. The glossary identifers in this list can be used to filter the places endpoint by `GlossaryID`. |
+| GET         | `/api/v0.5/counties`          | Reference list of metadata associated with counties. The place identifiers in this list can be used to filter the places endpoint by `PlaceID`. |
 
 **\*** Requests to the `/api/v0.5/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `TypeID`, `PageID`, or `GlossaryID`.
 

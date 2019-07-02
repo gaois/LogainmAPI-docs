@@ -85,7 +85,7 @@ The resources provided by the API are accessed via unique paths appended to the 
 | GET         | `/api/v0.5`                   | List of places and associated metadata.**\*** |
 | GET         | `/api/v0.5/{id}`              | Metadata associated with an individual place. |
 | GET         | `/api/v0.5/administrative-units` | Reference list of metadata associated with [Irish administrative units](https://www.logainm.ie/en/inf/help-categs). The unit identifers in this list can be used to filter the places endpoint by `TypeID`. |
-| GET         | `/api/v0.5/features`          | Reference list of metadata associated with toponymic features. The feature identifers in this list can be used to filter the places endpoint by `TypeID`. |
+| GET         | `/api/v0.5/features`          | Reference list of metadata associated with geographical features. The feature identifers in this list can be used to filter the places endpoint by `TypeID`. |
 | GET         | `/api/v0.5/glossary`          | Reference list of [words commonly found in Irish placenames](https://www.logainm.ie/en/gls/) and associated metadata. The glossary identifers in this list can be used to filter the places endpoint by `GlossaryID`. |
 | GET         | `/api/v0.5/counties`          | Reference list of metadata associated with counties. The place identifiers in this list can be used to filter the places endpoint by `PlaceID`. |
 
@@ -103,12 +103,12 @@ Use these query parameters to filter the results returned by the API.
 
 | Name          | Type          | Description    |
 | :------------ | :------------ | :------------- |
-| `PlaceID`     | integer       | Filter by editorial status (0-4). **(Privileged)** |
-| `TypeID`      | string        | Filter by manuscript volume archival reference (e.g. '0154') |
-| `GlossaryID`  | integer       |  |
-| `Gaeltacht`   | boolean       |  |
-| `PostOffice`  | boolean       |  |
-| `NorthernIreland` | boolean       |  |
+| `PlaceID`     | integer       | Filter by place identifier. For example, a `PlaceID` of `100013` returns all of the places in Donegal. |
+| `TypeID`      | string        | Filter by place type, such as an administrative unit or geographical feature. |
+| `GlossaryID`  | integer       | Filter by glossary entry. |
+| `Gaeltacht`   | boolean       | If true, only return places which are in a designated Gaeltacht area. |
+| `PostOffice`  | boolean       | If true, only return places in which there is or once was a post office. |
+| `NorthernIreland` | boolean       | If true, only return places which are in Northern Ireland. |
 | `CreatedBefore` | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format. |
 | `CreatedSince` | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format. |
 | `ModifiedBefore` | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format. |

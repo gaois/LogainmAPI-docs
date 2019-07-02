@@ -1,6 +1,6 @@
 # Logainm Application Programming Interface (Version 0.5): Developer documentation
 
-**Note:** This documentation describes a **prerelease** version of the Logainm Application Programming Interface (API). Features are being added on an ongoing basis. The documentation will be revised in advance of the v1.0 release.
+**Note:** This documentation describes a **prerelease** version of the Logainm API. Features are being added on an ongoing basis. The documentation will be revised in advance of the v1.0 release.
 
 ## Contents
 
@@ -15,6 +15,7 @@
 
 ## Introduction
 
+The Placenames Database of Ireland was created by [Fiontar & Scoil na Gaeilge](https://www.dcu.ie/fiontar_scoilnagaeilge/gaeilge/index.shtml) in collaboration with [The Placenames Branch](https://www.chg.gov.ie/gaeltacht/the-irish-language/the-placenames-branch/) (Department of Culture, Heritage and the Gaeltacht). This is a comprehensive management system for data, archival records and placenames research conducted by the State. It is a public resource for Irish people at home and abroad, and for all those who appreciate the rich heritage of Irish placenames. The database has been accessible via the [logainm.ie](https://www.logainm.ie) public website since 2008. This documentation describes a web-based Application Programming Interface (API) that exposes the database contents to programmatic queries. A [data dictionary](https://github.com/gaois/LogainmAPI-docs/blob/master/DATADICT.md) is available to assist users in parsing results returned by the API.
 
 ## API overview
 

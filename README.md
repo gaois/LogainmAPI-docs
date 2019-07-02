@@ -82,13 +82,13 @@ The resources provided by the API are accessed via unique paths appended to the 
 | Method      | Path                          | Collection     | Resource                  |
 | :---------- | :---------------------------- | :------------- | :------------------------ |
 | GET         | `/api`                        | N/A            | General API metadata.     |
-| GET         | `/api/v0.5`                   | N/A            | General API metadata.     |
+| GET         | `/api/v0.5`                   | N/A            | General API metadata.**\***    |
 | GET         | `/api/v0.5/cbe`               | CBÉ            | List of manuscript volumes and associated metadata.* |
 | GET         | `/api/v0.5/cbe/volumes`       | CBÉ            | Index of manuscript volumes and summary metadata. |
 | GET         | `/api/v0.5/cbed`              | CBÉD           | List of persons and associated metadata. |
 | GET         | `/api/v0.5/cbed/{id}`         | CBÉD           | Metadata associated with an individual place. |
 
-**\*** Requests to the `/api/v0.5/cbe` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `VolumeNumber`, `PageID`, `PartID`, `ItemID`,`CountyID`, `PlaceID`, `Country`, `GeoNameID`, `CollectorID`, `InformantID`, or `PersonID`.
+**\*** Requests to the `/api/v0.5/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `TypeID`, `PageID`, or `GlossaryID`.
 
 ### URL path parameters
 

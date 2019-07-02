@@ -1,4 +1,4 @@
-# LogainmAPI-docs
+# Logainm Application Programming Interface (Version 0.5): Developer documentation
 
 - `https://www.logainm.ie/api/v0.5/1412322`
 - `https://www.logainm.ie/api/v0.5/1411548`

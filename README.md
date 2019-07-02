@@ -82,14 +82,11 @@ The resources provided by the API are accessed via unique paths appended to the 
 | Method      | Path                          | Resource                  |
 | :---------- | :---------------------------- | :------------------------ |
 | GET         | `/api`                        | General API metadata.     |
-| GET         | `/api/v0.5`                   | General API metadata.**\***    |
-| GET         | `/api/v0.5/cbe`               | List of manuscript volumes and associated metadata.* |
-| GET         | `/api/v0.5/cbe/volumes`       | Index of manuscript volumes and summary metadata. |
-| GET         | `/api/v0.5/cbed`              | List of persons and associated metadata. |
-| GET         | `/api/v0.5/cbed/{id}`         | Metadata associated with an individual place. |
-| GET         | `/api/v0.5/administrative-units` | N/A            | Reference list of metadata associated with counties. |
-| GET         | `/api/v0.5/features`          | N/A            | Reference list of metadata associated with counties. |
-| GET         | `/api/v0.5/glossary`          | N/A            | Reference list of metadata associated with counties. |
+| GET         | `/api/v0.5`                   | List of places and associated metadata.**\*** |
+| GET         | `/api/v0.5/{id}`         | Metadata associated with an individual place. |
+| GET         | `/api/v0.5/administrative-units` | N/A            | Reference list of metadata associated with [Irish administrative units](https://www.logainm.ie/en/inf/help-categs). |
+| GET         | `/api/v0.5/features`          | N/A            | Reference list of metadata associated with toponymic features. |
+| GET         | `/api/v0.5/glossary`          | N/A            | Reference list of [words commonly found in Irish placenames](https://www.logainm.ie/en/gls/) and associated metadata. |
 | GET         | `/api/v0.5/counties`          | N/A            | Reference list of metadata associated with counties. |
 
 **\*** Requests to the `/api/v0.5/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `TypeID`, `PageID`, or `GlossaryID`.

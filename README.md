@@ -103,8 +103,16 @@ Use these query parameters to filter the results returned by the API.
 
 | Name          | Type          | Description    |
 | :------------ | :------------ | :------------- |
-| `Status`      | integer       | Filter by editorial status (0-4). **(Privileged)** |
-| `VolumeNumber` | string        | Filter by manuscript volume archival reference (e.g. '0154') |
+| `PlaceID`     | integer       | Filter by editorial status (0-4). **(Privileged)** |
+| `TypeID`      | string        | Filter by manuscript volume archival reference (e.g. '0154') |
+| `GlossaryID`  | integer       |  |
+| `Gaeltacht`   | boolean       |  |
+| `PostOffice`  | boolean       |  |
+| `NorthernIreland` | boolean       |  |
+| `CreatedBefore` | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format. |
+| `CreatedSince` | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format. |
+| `ModifiedBefore` | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format. |
+| `ModifiedSince` | ISO 8601 datetime | Retrieve records last updated after a given date in `YYYY-MM-DD` format. |
 
 ### Illustrative examples
 

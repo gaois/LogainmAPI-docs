@@ -2,7 +2,8 @@
 
 ## Additional data
 
-- Historical/archival references
+- Additional commentary on placenames by the Placenames Branch (cf. [https://www.logainm.ie/en/1383466](https://www.logainm.ie/en/1383466)).
+- Historical/archival references.
 - Links to [ainm.ie](https://www.ainm.ie).
 
 ## Additional query parameters

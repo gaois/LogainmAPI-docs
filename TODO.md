@@ -1,5 +1,10 @@
 # Planned developments
 
+## Additional data
+
+- Historical/archival references
+- Links to [ainm.ie](https://www.ainm.ie).
+
 ## Additional query parameters
 
 - Textual search, e.g. `/api/v0.5/?Query=Straleel`.

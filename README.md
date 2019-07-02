@@ -39,11 +39,6 @@ After a period of time it may become necessary to deprecate older API versions f
 
 Clients requesting a resource via the API are required to authenticate their identity. This is achieved by passing an API key to the service with each request. Authentication offers some protection to the service provider from abuse of the API involving request overloads. It also allows us to retain some usage statistics, with a view to performance monitoring and service enhancement. Learn more about the data we retain in the following sections.
 
-
-## API authentication
-
-Clients requesting a resource via the API are required to authenticate their identity. This is achieved by passing an API key to the service with each request. Authentication offers some protection to the service provider from abuse of the API involving request overloads. It also allows us to retain some usage statistics, with a view to performance monitoring and service enhancement. Learn more about the data we retain in the following sections.
-
 ### How to obtain your API key
 
 Visit the Gaois Developer Hub at [gaois.ie](https://www.gaois.ie/). Log in or register to create an account and you will be able to access your unique API key.
@@ -79,6 +74,36 @@ As an alternative, pass the API key as the username (with an empty password) usi
 The API is served over a HTTPS protocol. Though HTTP requests to the service are automatically redirected to HTTPS, you should only ever interact with the API using HTTPS-prefixed URLs.
 
 While HTTPS offers a signficant level of security, we would stress that the basic authentication methods described above do not amount to end-to-end encryption. **You should only ever pass your API Key to the service**—never include sensitive data, particularly passwords, as part of your requests.
+
+## Resource paths
+
+The resources provided by the API are accessed via unique paths appended to the main website URL. All currently-available request paths are listed below. A [data dictionary](https://github.com/gaois/LogainmAPI-docs/blob/master/DATADICT.md) is available to assist users in parsing results returned by the API.
+
+| Method      | Path                          | Collection     | Resource                  |
+| :---------- | :---------------------------- | :------------- | :------------------------ |
+| GET         | `/api`                        | N/A            | General API metadata.     |
+| GET         | `/api/v0.5`                   | N/A            | General API metadata.     |
+| GET         | `/api/v0.5/cbe`               | CBÉ            | List of manuscript volumes and associated metadata.* |
+| GET         | `/api/v0.5/cbe/volumes`       | CBÉ            | Index of manuscript volumes and summary metadata. |
+| GET         | `/api/v0.5/cbed`              | CBÉD           | List of persons and associated metadata. |
+| GET         | `/api/v0.5/cbed/{id}`         | CBÉD           | Metadata associated with an individual place. |
+
+**\*** Requests to the `/api/v0.5/cbe` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `VolumeNumber`, `PageID`, `PartID`, `ItemID`,`CountyID`, `PlaceID`, `Country`, `GeoNameID`, `CollectorID`, `InformantID`, or `PersonID`.
+
+### URL path parameters
+
+| Name          | Type          | Description    |
+| :------------ | :------------ | :------------- |
+| `id`          | integer       | Resource ID.   |
+
+### URL query parameters
+
+Use these query parameters to filter the results returned by the API.
+
+| Name          | Type          | Description    |
+| :------------ | :------------ | :------------- |
+| `Status`      | integer       | Filter by editorial status (0-4). **(Privileged)** |
+| `VolumeNumber` | string        | Filter by manuscript volume archival reference (e.g. '0154') |
 
 ### Illustrative examples
 

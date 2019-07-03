@@ -29,8 +29,8 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Categories        | [`placeCategory`](#placeCategory) | none or one or many | Describes the categories associated with this place. Only in exceptional cases will places have more than one category. |
 | IncludedIn      | [`placeSummary`](#placeSummary) | none or one or many | Summary information regarding the administrative units (counties, civil parishes, etc.) which include this place. |
 | Includes        | [`placeCategory`](#placeCategory) | none or one or many | Describes the place categories included within the bounds of this place. |
-| Geography       | [`geography`](#geography) | none or one | Geographical metadata related to this place. |
-| GridReferences  | [`gridReference`](#gridReference) | none or one or many | One or more sets of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates relating to this place. |
+| Geography       | [`geography`](#geography) | none or one | Geographical location of the place expressed in terms of latitudinal and longitudinal coordinates. |
+| GridReferences  | [`gridReference`](#gridReference) | none or one or many | Geographical location of the place expressed in terms of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates. |
 | Gaeltacht       | [`placeProperty`](#placeProperty) | none or one         | Indicates whether the place is in the Gaeltacht. |
 | PostOffice      | [`placeProperty`](#placeProperty) | none or one         | Indicates whether there is or was once a post office in this place. |
 | NorthernIreland | [`placeProperty`](#placeProperty) | none or one         | Indicates whether this place is in Northern Ireland. |

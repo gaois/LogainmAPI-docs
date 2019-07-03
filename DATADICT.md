@@ -6,4 +6,15 @@ This document describes the data structure of the results made available via the
 
 ## Contents
 
+- [Places](#places)
+  - [`place`](#place)
+
 ## Places
+
+Queries to the Logainm API may return one or more `place` objects. The information below describes the properties of this object type.
+
+### `place`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The unique place identifier. |

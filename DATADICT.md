@@ -22,3 +22,14 @@ Queries to the Logainm API may return one or more `place` objects. The informati
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | Permalink       | string              | one                 | A permanent static hyperlink to the public place entry on logainm.ie. |
 | Featured        | ISO 8601 datetime   | none or one or many | Denotes the date or dates on which the place was featured as the place of the day on the [logainm.ie](https://www.logainm.ie) website, if featured. |
+| Cluster         | [`placeCluster`](#placeCluster) | none or one |  |
+| Placenames      | [`placename`](#placename) | one or many |  |
+| Glossary        | [`glossary`](#glossary) | none or one |  |
+| Type            | [`placeType`](#placeType) | none or one |  |
+| IsIn            | [`placeSummary`](#placeSummary) | none or one or many |  |
+| HasIn           | [`placeType`](#placeType) | none or one or many |  |
+| Geography       | [`geography`](#geography) | none or one |  |
+| GridReference   | [`gridReference`](#gridReference) | none or one or many |  |
+| Gaeltacht       | boolean             | one                 |  |
+| PostOffice      | boolean             | one                 |  |
+| NorthernIreland | boolean             | one                 |  |

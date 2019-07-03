@@ -8,6 +8,8 @@ This document describes the data structure of the results made available via the
 
 - [Places](#places)
   - [`place`](#place)
+  - [`geography`](#geography)
+  - [`gridReference`](#gridReference)
 - [Common entities](#common-entities)
   - [`coordinates`](#coordinates) 
   

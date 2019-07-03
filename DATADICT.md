@@ -8,6 +8,9 @@ This document describes the data structure of the results made available via the
 
 - [Places](#places)
   - [`place`](#place)
+- [Common entities](#common-entities)
+  - [`coordinates`](#coordinates) 
+  
 
 ## Places
 
@@ -39,3 +42,14 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Links           | [`placeLink`](#placeLink) | none or one or many | Provides one or more links to related data in external resources. External resources include [OSI](https://www.osi.ie/), [Placenames Northern Ireland](http://www.placenamesni.org/), [Wikipedia](https://www.wikipedia.org/), [Geonames](http://www.geonames.org/), etc. |
 | Folklore        | [`folkloreLink`](#folkloreLink) | none or one or many | Provides links to folkloric data from [dúchas.ie](https://www.logainm.ie) associated with this place, if available. |
 | SameAs          | [`sameAs`](#sameAs) | none or one or many | Specifies one or more co-references to this place in data sets other than the Placenames Database of Ireland. Consistent with OWL Web Ontology [SameAs](https://www.w3.org/TR/owl-ref/) definition. |
+
+## Common entities
+
+Certain entities may be common to multiple object types. These are described below.
+
+### `coordinates`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Latitude        | double              | one                 | The latitudinal coordinate. |
+| Longitude       | double              | one                 | The longitudinal coordinate. |

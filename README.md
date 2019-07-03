@@ -36,6 +36,8 @@ Older versions will be supported for developer convenience: without versioning, 
 
 After a period of time it may become necessary to deprecate older API versions for maintenance or performance reasons. When you register for your API key, you will be asked if you are willing to receive communications from Fiontar & Scoil na Gaeilge from time to time. Agreeing to receive such communication means you will receive advance notice of any such changes.
 
+**Note:** Prerelease versions of this API (i.e. < v1.0) are for testing purposes and will not be maintained once a v1.0 release has been reached.
+
 ## API authentication
 
 Clients requesting a resource via the API are required to authenticate their identity. This is achieved by passing an API key to the service with each request. Authentication offers some protection to the service provider from abuse of the API involving request overloads. It also allows us to retain some usage statistics, with a view to performance monitoring and service enhancement. Learn more about the data we retain in the following sections.

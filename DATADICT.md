@@ -11,7 +11,7 @@ This document describes the data structure of the results made available via the
 
 ## Places
 
-The `place` object is at the core of the Logainm API: it represents a geographic location and includes associated toponymic, lexical, and other metadata. Queries to the Logainm API may return one or more `place` objects. The information below describes the properties of this object type.
+The `place` object is at the core of the Logainm API: it represents a geographic location and includes associated toponymic, lexical, and other metadata. Queries to the API may return one or more `place` objects. The information below describes the properties of this object type.
 
 ### `place`
 
@@ -22,7 +22,7 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | Permalink       | string              | one                 | A permanent static hyperlink to the public place entry on logainm.ie. |
 | Featured        | ISO 8601 datetime   | none or one or many | Denotes the date or dates on which this place was featured as the place of the day on the [logainm.ie](https://www.logainm.ie) website, if featured. |
-| Cluster         | [`placeCluster`](#placeCluster) | none or one | Metadata regarding a group of places, of which this place is a member, that share placenames and are colocated or are proximate to each other. |
+| Cluster         | [`placeCluster`](#placeCluster) | none or one | Metadata representing a group of places, of which this place is a member, that share placenames and are colocated or are proximate to each other. |
 | Placenames      | [`placename`](#placename) | one or many | One or more placenames, and associated metadata, that are given to this place. |
 | Glossary        | [`glossary`](#glossary) | none or one | Describes words commonly found in Irish placenames and which are present in placenames associated with this place. |
 | Type            | [`placeType`](#placeType) | none or one | Describes the place type. |

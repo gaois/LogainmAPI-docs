@@ -11,7 +11,7 @@ This document describes the data structure of the results made available via the
 
 ## Places
 
-Queries to the Logainm API may return one or more `place` objects. The information below describes the properties of this object type.
+The `place` object is at the core of the Logainm API: it represents a geographic location and includes associated toponymic, lexical, and other metadata. Queries to the Logainm API may return one or more `place` objects. The information below describes the properties of this object type.
 
 ### `place`
 

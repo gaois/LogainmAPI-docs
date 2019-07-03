@@ -27,8 +27,8 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Placenames      | [`placename`](#placename) | one or many | One or more placenames, and associated metadata, that are given to this place. |
 | Glossary        | [`glossary`](#glossary) | none or one | Describes words commonly found in Irish placenames and which are present in placenames associated with this place. |
 | Categories        | [`placeCategory`](#placeCategory) | none or one or many | Describes the categories associated with this place. Only in exceptional cases will places have more than one category. |
-| ContainedBy     | [`placeSummary`](#placeSummary) | none or one or many | Summary information regarding any other places which contain, by virtue of being geographically larger or belonging to a higher-order administrative unit, this place. |
-| Contains        | [`placeCategory`](#placeCategory) | none or one or many | Information regarding the place categories present within the bounds of this place. |
+| IncludedIn      | [`placeSummary`](#placeSummary) | none or one or many | Summary information regarding the administrative units (counties, civil parishes, etc.) which include this place. |
+| Includes        | [`placeCategory`](#placeCategory) | none or one or many | Describes the place categories included within the bounds of this place. |
 | Geography       | [`geography`](#geography) | none or one | Geographical metadata related to this place. |
 | GridReferences  | [`gridReference`](#gridReference) | none or one or many | One or more sets of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates relating to this place. |
 | Gaeltacht       | boolean             | one                 | If true this place is in the Gaeltacht. |

@@ -45,9 +45,14 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Folklore        | [`folkloreLink`](#folkloreLink) | none or one or many | Provides links to folkloric data from [dúchas.ie](https://www.logainm.ie) associated with this place, if available. |
 | SameAs          | [`sameAs`](#sameAs) | none or one or many | Specifies one or more co-references to this place in data sets other than the Placenames Database of Ireland. Consistent with OWL Web Ontology [SameAs](https://www.w3.org/TR/owl-ref/) definition. |
 
-## Common entities
+### `geography`
 
-Certain entities may be common to multiple object types. These are described below.
+Expresses a geographical location in terms of latitudinal and longitudinal coordinates.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Accurate        | boolean             | one                 | Indicates whether the coordinates are believed to be precise. Inaccurate coordinates are those that have been obtained by extrapolation from neighbouring places. |
+| Coordinates     | [`coordinates`](#coordinates) | one or many        | One or more pairs of latitudinal and longitudinal coordinates. Most places are represented by a single pair of coordinates. However, certain geographical features, such as rivers or islands, in particular, may have two or more pairs. |
 
 ### `coordinates`
 
@@ -55,3 +60,13 @@ Certain entities may be common to multiple object types. These are described bel
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | Latitude        | double              | one                 | The latitudinal coordinate. |
 | Longitude       | double              | one                 | The longitudinal coordinate. |
+
+### `gridReference`
+
+Expresses a geographical location in terms of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Square          | stringer            | one                 | Specifies the grid square. |
+| Easting         | integer             | one                 | Specifies the easting in the square. |
+| Northing        | integer             | one                 | Specifies the northing in the square. |

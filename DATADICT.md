@@ -22,11 +22,11 @@ Queries to the Logainm API may return one or more `place` objects. The informati
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | Permalink       | string              | one                 | A permanent static hyperlink to the public place entry on logainm.ie. |
 | Featured        | ISO 8601 datetime   | none or one or many | Denotes the date or dates on which the place was featured as the place of the day on the [logainm.ie](https://www.logainm.ie) website, if featured. |
-| Cluster         | [`placeCluster`](#placeCluster) | none or one |  |
-| Placenames      | [`placename`](#placename) | one or many |  |
-| Glossary        | [`glossary`](#glossary) | none or one |  |
-| Type            | [`placeType`](#placeType) | none or one |  |
-| IsIn            | [`placeSummary`](#placeSummary) | none or one or many |  |
+| Cluster         | [`placeCluster`](#placeCluster) | none or one | Metadata regarding a group of places, of which this place is a member, that share placenames and are colocated or proximate to each other. |
+| Placenames      | [`placename`](#placename) | one or many | One or more placenames, and associated metadata, that are given to the place. |
+| Glossary        | [`glossary`](#glossary) | none or one | Describes words commonly found in Irish placenames and which are present in placenames associated with this entry. |
+| Type            | [`placeType`](#placeType) | none or one | Describes the place type. |
+| IsIn            | [`placeSummary`](#placeSummary) | none or one or many | Summary information regarding any other places which contain, by virtue of being geographically larger or belonging to a higher administrative order, this entry. |
 | HasIn           | [`placeType`](#placeType) | none or one or many |  |
 | Geography       | [`geography`](#geography) | none or one |  |
 | GridReference   | [`gridReference`](#gridReference) | none or one or many |  |

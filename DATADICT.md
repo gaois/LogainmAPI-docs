@@ -20,7 +20,7 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | ID              | integer             | one                 | The unique place identifier. |
 | DateCreated     | ISO 8601 datetime   | one                 | The date and time of entry creation.  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
-| Permalink       | string              | one                 | A permanent static hyperlink to the public place entry on logainm.ie. |
+| Permalink       | string              | one                 | A permanent static hyperlink where a human reader can find more information about the place. This automatically redirects to the Irish or English version of the place information page. |
 | Featured        | ISO 8601 datetime   | none or one or many | Denotes the date or dates on which this place was featured as the place of the day on the [logainm.ie](https://www.logainm.ie) website, if featured. |
 | Cluster         | [`placeCluster`](#placeCluster) | none or one | Metadata representing a group of places, of which this place is a member, that share placenames and are colocated or are proximate to each other. |
 | Placenames      | [`placename`](#placename) | one or many | One or more placenames, and associated metadata, that are given to this place. |

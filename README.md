@@ -87,12 +87,12 @@ The resources provided by the API are accessed via unique paths appended to the 
 | GET         | `/api`                        | General API metadata.     |
 | GET         | `/api/v0.5`                   | List of places and associated metadata.**\*** |
 | GET         | `/api/v0.5/{id}`              | Metadata associated with an individual place. |
-| GET         | `/api/v0.5/administrative-units` | Reference list of metadata associated with [Irish administrative units](https://www.logainm.ie/en/inf/help-categs). The unit identifers in this list can be used to filter places by `TypeID`. |
-| GET         | `/api/v0.5/features`          | Reference list of metadata associated with geographical features. The feature identifers in this list can be used to filter places by `TypeID`. |
+| GET         | `/api/v0.5/administrative-units` | Reference list of metadata associated with [Irish administrative units](https://www.logainm.ie/en/inf/help-categs). The unit identifers in this list can be used to filter places by `CategoryID`. |
+| GET         | `/api/v0.5/features`          | Reference list of metadata associated with geographical features. The feature identifers in this list can be used to filter places by `CategoryID`. |
 | GET         | `/api/v0.5/glossary`          | Reference list of [words commonly found in Irish placenames](https://www.logainm.ie/en/gls/) and associated metadata. The glossary identifers in this list can be used to filter places by `GlossaryID`. |
 | GET         | `/api/v0.5/counties`          | Reference list of metadata associated with counties. The place identifiers in this list can be used to filter the places endpoint by `PlaceID`. |
 
-**\*** Requests to the `/api/v0.5/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `TypeID`, `PageID`, or `GlossaryID`.
+**\*** Requests to the `/api/v0.5/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `CategoryID`, `PageID`, or `GlossaryID`.
 
 ### URL path parameters
 
@@ -107,7 +107,7 @@ Use these query parameters to filter the results returned by the API.
 | Name          | Type          | Description    |
 | :------------ | :------------ | :------------- |
 | `PlaceID`     | integer       | Filter by place identifier. For example, a `PlaceID` of `100013` returns all of the places in Donegal. |
-| `TypeID`      | string        | Filter by place type, such as an administrative unit or geographical feature. |
+| `CategoryID`  | string        | Filter by place category, such as an administrative unit or geographical feature. |
 | `GlossaryID`  | integer       | Filter by glossary entry. |
 | `Gaeltacht`   | boolean       | If true, only return places which are in a designated Gaeltacht area. If false, exlude places in Gaeltacht areas from the results set. |
 | `PostOffice`  | boolean       | If true, only return places in which there is or once was a post office. If false, exlude places in which there is or once was a post office from the results set. |
@@ -122,7 +122,7 @@ Use these query parameters to filter the results returned by the API.
 Below is a non-exhaustive list of valid API request URLs, provided for demonstration purposes:
 
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100013`
-- `https://www.logainm.ie/api/v0.5/?PlaceID=100009&TypeID=PAR`
+- `https://www.logainm.ie/api/v0.5/?PlaceID=100009&CategoryID=PAR`
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100002&ModifiedSince=2019-01-01`
 - `https://www.logainm.ie/api/v0.5/?GlossaryID=58`
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100024&Gaeltacht=true`

@@ -8,10 +8,11 @@ This document describes the data structure of the results made available via the
 
 - [Places](#places)
   - [`place`](#place)
+  - [`placeCluster`](#placeCluster)
+  - [`placeClusterMember`](#placeClusterMember)
   - [`geography`](#geography)
-  - [`gridReference`](#gridReference)
-- [Common entities](#common-entities)
   - [`coordinates`](#coordinates) 
+  - [`gridReference`](#gridReference)
   
 
 ## Places
@@ -44,6 +45,24 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Links           | [`placeLink`](#placeLink) | none or one or many | Provides one or more links to related data in external resources. External resources include [OSI](https://www.osi.ie/), [Placenames Northern Ireland](http://www.placenamesni.org/), [Wikipedia](https://www.wikipedia.org/), [Geonames](http://www.geonames.org/), etc. |
 | Folklore        | [`folkloreLink`](#folkloreLink) | none or one or many | Provides links to folkloric data from [dúchas.ie](https://www.logainm.ie) associated with this place, if available. |
 | SameAs          | [`sameAs`](#sameAs) | none or one or many | Specifies one or more co-references to this place in data sets other than the Placenames Database of Ireland. Consistent with OWL Web Ontology [SameAs](https://www.w3.org/TR/owl-ref/) definition. |
+
+### `placeCluster`
+
+Metadata representing a group of places that share placenames and are colocated or are proximate to each other.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| FocusID         | integer             | one                 | Identifies the place that forms the 'focus' of the cluster. It may be of the type most readily associated with a particular placename or feature the richest set of metadata among all the cluster members. |
+| Members         | [`placeClusterMember`](#placeClusterMember) | one or many         | Represents the individual places that form part of the cluster. |
+
+### `placeClusterMember`
+
+Represents a member of a `placeCluster`.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| PlaceID         | integer             | one                 | The place identifier.     |
+| Category        | [`placeCategory`](#placeCategory) | none or one         | The place category. |
 
 ### `geography`
 

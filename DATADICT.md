@@ -33,8 +33,8 @@ Queries to the Logainm API may return one or more `place` objects. The informati
 | Gaeltacht       | boolean             | one                 | If true this place is in the Gaeltacht. |
 | PostOffice      | boolean             | one                 | If true is or was once a post office in this place. |
 | NorthernIreland | boolean             | one                 | If true this place is in Northern Ireland. |
-| Images          | [`image`](#image)   | none or one or many |  |
-| Resources       | [`resource`](#resource) | none or one or many |  |
+| Images          | [`image`](#image)   | none or one or many | Describes one or more scanned records from the Placenames Branch archive relating to this place. |
+| Resources       | [`resource`](#resource) | none or one or many | Describes one or more toponomy resources available on [logainm.ie](https://www.logainm.ie) relating to this place. |
 | Links           | [`placeLink`](#placeLink) | none or one or many |  |
-| Folklore        | [`folkloreLink`](#folkloreLink) | none or one or many |  |
-| SameAs          | [`sameAs`](#sameAs) | none or one or many |  |
+| Folklore        | [`folkloreLink`](#folkloreLink) | none or one or many | Provides links to folkloric data from [dúchas.ie](https://www.logainm.ie) associated with this place, if available. |
+| SameAs          | [`sameAs`](#sameAs) | none or one or many | Specifies one or more co-references to this place in data sets other than the Placenames Database of Ireland. Consistent with OWL Web Ontology [SameAs](https://www.w3.org/TR/owl-ref/) definition. |

@@ -30,9 +30,9 @@ Queries to the Logainm API may return one or more `place` objects. The informati
 | Contains        | [`placeType`](#placeType) | none or one or many | Information regarding the place types present within the bounds of this place. |
 | Geography       | [`geography`](#geography) | none or one | Geographical metadata related to this place. |
 | GridReferences  | [`gridReference`](#gridReference) | none or one or many | One or more sets of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates. |
-| Gaeltacht       | boolean             | one                 |  |
-| PostOffice      | boolean             | one                 |  |
-| NorthernIreland | boolean             | one                 |  |
+| Gaeltacht       | boolean             | one                 | If true this place is in the Gaeltacht. |
+| PostOffice      | boolean             | one                 | If true is or was once a post office in this place. |
+| NorthernIreland | boolean             | one                 | If true this place is in Northern Ireland. |
 | Images          | [`image`](#image)   | none or one or many |  |
 | Resources       | [`resource`](#resource) | none or one or many |  |
 | Links           | [`placeLink`](#placeLink) | none or one or many |  |

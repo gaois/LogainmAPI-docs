@@ -29,7 +29,7 @@ Queries to the Logainm API may return one or more `place` objects. The informati
 | ContainedBy     | [`placeSummary`](#placeSummary) | none or one or many | Summary information regarding any other places which contain, by virtue of being geographically larger or belonging to a higher-order administrative unit, this place. |
 | Contains        | [`placeType`](#placeType) | none or one or many | Information regarding the place types present within the bounds of this place. |
 | Geography       | [`geography`](#geography) | none or one | Geographical metadata related to this place. |
-| GridReferences  | [`gridReference`](#gridReference) | none or one or many | One or more sets of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates. |
+| GridReferences  | [`gridReference`](#gridReference) | none or one or many | One or more sets of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates relating to this place. |
 | Gaeltacht       | boolean             | one                 | If true this place is in the Gaeltacht. |
 | PostOffice      | boolean             | one                 | If true is or was once a post office in this place. |
 | NorthernIreland | boolean             | one                 | If true this place is in Northern Ireland. |

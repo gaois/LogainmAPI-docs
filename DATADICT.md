@@ -31,9 +31,9 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Includes        | [`placeCategory`](#placeCategory) | none or one or many | Describes the place categories included within the bounds of this place. |
 | Geography       | [`geography`](#geography) | none or one | Geographical metadata related to this place. |
 | GridReferences  | [`gridReference`](#gridReference) | none or one or many | One or more sets of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates relating to this place. |
-| Gaeltacht       | [`placeProperty`](#placeProperty) | none or one         | If true this place is in the Gaeltacht. |
-| PostOffice      | [`placeProperty`](#placeProperty) | none or one         | If true is or was once a post office in this place. |
-| NorthernIreland | [`placeProperty`](#placeProperty) | none or one         | If true this place is in Northern Ireland. |
+| Gaeltacht       | [`placeProperty`](#placeProperty) | none or one         | Indicates whether the place is in the Gaeltacht. |
+| PostOffice      | [`placeProperty`](#placeProperty) | none or one         | Indicates whether there is or was once a post office in this place. |
+| NorthernIreland | [`placeProperty`](#placeProperty) | none or one         | Indicates whether this place is in Northern Ireland. |
 | Images          | [`image`](#image)   | none or one or many | Describes one or more scanned records from the Placenames Branch archive relating to this place. |
 | Resources       | [`resource`](#resource) | none or one or many | Describes one or more toponomy resources available on [logainm.ie](https://www.logainm.ie) relating to this place. |
 | Links           | [`placeLink`](#placeLink) | none or one or many | Provides links to relevant data in data sets other than the Placenames Database of Ireland. |

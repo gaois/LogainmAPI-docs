@@ -128,6 +128,7 @@ Below is a non-exhaustive list of valid API request URLs, provided for demonstra
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100024&Gaeltacht=true`
 - `https://www.logainm.ie/api/v0.5/1412322`
 - `https://www.logainm.ie/api/v0.5/1411548`
+- `https://www.logainm.ie/api/v0.5/14448`
 - `https://www.logainm.ie/api/v0.5/1384618`
 - `https://www.logainm.ie/api/v0.5/26783`
 - `https://www.logainm.ie/api/v0.5/1375542`

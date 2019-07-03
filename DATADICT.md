@@ -18,6 +18,7 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The unique place identifier. |
+| ReplacementID   | integer             | none or one         | If this value is set the requested place record has been merged into another record in the database. The value is the replacement record identifier. |
 | DateCreated     | ISO 8601 datetime   | one                 | The date and time of entry creation.  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | Permalink       | string              | one                 | A permanent static hyperlink where a human reader can find more information about the place. This automatically redirects to the Irish or English version of the place information page. |
@@ -25,7 +26,7 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Cluster         | [`placeCluster`](#placeCluster) | none or one | Metadata representing a group of places, of which this place is a member, that share placenames and are colocated or are proximate to each other. |
 | Placenames      | [`placename`](#placename) | one or many | One or more placenames, and associated metadata, that are given to this place. |
 | Glossary        | [`glossary`](#glossary) | none or one | Describes words commonly found in Irish placenames and which are present in placenames associated with this place. |
-| Category        | [`placeCategory`](#placeCategory) | none or one | Describes the place category. |
+| Categories        | [`placeCategory`](#placeCategory) | none or one or many | Describes the categories associated with this place. Only in exceptional cases will places have more than one category. |
 | ContainedBy     | [`placeSummary`](#placeSummary) | none or one or many | Summary information regarding any other places which contain, by virtue of being geographically larger or belonging to a higher-order administrative unit, this place. |
 | Contains        | [`placeCategory`](#placeCategory) | none or one or many | Information regarding the place categories present within the bounds of this place. |
 | Geography       | [`geography`](#geography) | none or one | Geographical metadata related to this place. |

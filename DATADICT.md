@@ -10,6 +10,7 @@ This document describes the data structure of the results made available via the
   - [`place`](#place)
   - [`placeCluster`](#placeCluster)
   - [`placeClusterMember`](#placeClusterMember)
+  - [`placeCategory`](#placeCategory)
   - [`geography`](#geography)
   - [`coordinates`](#coordinates) 
   - [`gridReference`](#gridReference)
@@ -63,6 +64,19 @@ Represents a member of a `placeCluster`.
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | PlaceID         | integer             | one                 | The place identifier.     |
 | Category        | [`placeCategory`](#placeCategory) | none or one         | The place category. |
+
+### `placeCategory`
+
+Describes a place category.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | string              | one                 | The category identifier.  |
+| NameEN          | string              | none or one         | The English-language category name. |
+| NameGA          | string              | none or one         | The Irish-language category name. |
+| NamePluralEN    | string              | none or one         | The English-language category name plural form. |
+| NamePluralGA    | string              | none or one         | The Irish-language category name plural form. |
+| Count           | integer             | none or one         | The number of placenames associated with this category, if known. |
 
 ### `geography`
 

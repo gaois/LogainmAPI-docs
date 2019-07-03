@@ -33,3 +33,8 @@ Queries to the Logainm API may return one or more `place` objects. The informati
 | Gaeltacht       | boolean             | one                 |  |
 | PostOffice      | boolean             | one                 |  |
 | NorthernIreland | boolean             | one                 |  |
+| Images          | [`image`](#image)   | none or one or many |  |
+| Resources       | [`resource`](#resource) | none or one or many |  |
+| Links           | [`placeLink`](#placeLink) | none or one or many |  |
+| Folklore        | [`folkloreLink`](#folkloreLink) | none or one or many |  |
+| SameAs          | [`sameAs`](#sameAs) | none or one or many |  |

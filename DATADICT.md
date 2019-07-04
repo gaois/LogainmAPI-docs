@@ -14,6 +14,7 @@ This document describes the data structure of the results made available via the
   - [`geography`](#geography)
   - [`coordinates`](#coordinates) 
   - [`gridReference`](#gridReference)
+  - [`link`](#link)
   - [`sameAs`](#sameAs)
 
 ## Places
@@ -105,6 +106,15 @@ Expresses a geographical location in terms of [Irish Grid Reference System](http
 | Square          | stringer            | one                 | Specifies the grid square. |
 | Easting         | integer             | one                 | Specifies the easting in the square. |
 | Northing        | integer             | one                 | Specifies the northing in the square. |
+
+### `link`
+
+Provides a link to related data in an external resource.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Type            | string              | one                 | The external resource type. External resources include [OSI](https://www.osi.ie/), [Placenames Northern Ireland](http://www.placenamesni.org/), [Wikipedia](https://www.wikipedia.org/), [Geonames](http://www.geonames.org/), etc. |
+| Target          | string              | one                 | The link target. This may be a URI, URL, or other identifier, depending on the resource type. |
 
 ### `sameAs`
 

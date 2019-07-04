@@ -101,7 +101,7 @@ Indicates the [research and approval status](https://www.logainm.ie/en/inf/help-
 
 ### `audio`
 
-Describes an audio file that provides an indicative pronunciation of the placename.
+Describes an audio file providing an indicative pronunciation of a placename.
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |

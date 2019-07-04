@@ -127,6 +127,7 @@ Below is a non-exhaustive list of valid API request URLs, provided for demonstra
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100002&ModifiedSince=2019-01-01`
 - `https://www.logainm.ie/api/v0.5/?GlossaryID=58`
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100024&Gaeltacht=true`
+- `https://www.logainm.ie/api/v0.5/?PlaceID=100010&ExcludeStreets=true`
 - `https://www.logainm.ie/api/v0.5/1412322`
 - `https://www.logainm.ie/api/v0.5/1411548`
 - `https://www.logainm.ie/api/v0.5/14448`

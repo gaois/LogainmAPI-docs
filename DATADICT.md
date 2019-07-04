@@ -153,8 +153,8 @@ Expresses a geographical location in terms of [Irish Grid Reference System](http
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | Square          | string              | one                 | Specifies the grid square. |
-| Easting         | integer             | one                 | Specifies the easting in the square. |
-| Northing        | integer             | one                 | Specifies the northing in the square. |
+| Easting         | long                | none or one         | Specifies the easting in the square. |
+| Northing        | long                | none or one         | Specifies the northing in the square. |
 
 ### `placeProperty`
 

@@ -9,6 +9,7 @@ This document describes the data structure of the results made available via the
 - [`place`](#place)
   - [`cluster`](#cluster)
   - [`clusterMember`](#clusterMember)
+  - [`placeSummary`](#placeSummary)
   - [`geography`](#geography)
   - [`coordinates`](#coordinates) 
   - [`gridReference`](#gridReference)
@@ -67,7 +68,18 @@ Represents a member of a `cluster`.
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | PlaceID         | integer             | one                 | The place identifier.     |
-| Category        | [`category`](#category) | none or one         | The place category. |
+| Category        | [`category`](#category) | none or one         | The place category.      |
+
+### `placeSummary`
+
+Summary information regarding a particular place.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The place identifier.     |
+| NameEN          | string              | none or one         | The English-language placename. |
+| NameGA          | string              | none or one         | The Irish-language placename. |
+| Category        | [`category`](#category) | none or one         | The place category.      |
 
 ### `geography`
 

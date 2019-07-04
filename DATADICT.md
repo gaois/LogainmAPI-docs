@@ -143,7 +143,7 @@ Specifies a co-reference to a particular place in data sets other than the Place
 
 ## `category`
 
-Describes a place category. Categories encompass both [administrative units](https://www.logainm.ie/en/inf/help-categs) and geographical features.
+Describes a place category. Categories encompass both [administrative units](https://www.logainm.ie/en/inf/help-categs) and geographical features. One or more categories may be returned as part of a `place` object or a reference list of `category` objects may be obtained from the appropriate API [endpoint](./README.md#resource-paths).
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
@@ -156,7 +156,7 @@ Describes a place category. Categories encompass both [administrative units](htt
 
 ## `glossary`
 
-Describes a set of related words commonly found in Irish placenames.
+Describes a set of related words commonly found in Irish placenames. One or more glossary entries may be returned as part of a `place` object or a reference list of `glossary` objects may be obtained from the appropriate API [endpoint](./README.md#resource-paths).
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |

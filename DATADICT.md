@@ -89,6 +89,8 @@ Expresses a geographical location in terms of latitudinal and longitudinal coord
 
 ### `coordinates`
 
+Represents a pair of geographic coordinates.
+
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | Latitude        | double              | one                 | The latitudinal coordinate. |

@@ -14,7 +14,7 @@ This document describes the data structure of the results made available via the
   - [`geography`](#geography)
   - [`coordinates`](#coordinates) 
   - [`gridReference`](#gridReference)
-  
+  - [`sameAs`](#sameAs)
 
 ## Places
 
@@ -105,3 +105,11 @@ Expresses a geographical location in terms of [Irish Grid Reference System](http
 | Square          | stringer            | one                 | Specifies the grid square. |
 | Easting         | integer             | one                 | Specifies the easting in the square. |
 | Northing        | integer             | one                 | Specifies the northing in the square. |
+
+### `sameAs`
+
+Specifies a co-reference to a particular place in data sets other than the Placenames Database of Ireland. Consistent with OWL Web Ontology SameAs definition.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Uri             | string              | one                 | The URI of the external resource. |

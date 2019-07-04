@@ -13,6 +13,7 @@ This document describes the data structure of the results made available via the
   - [`coordinates`](#coordinates) 
   - [`gridReference`](#gridReference)
   - [`placeProperty`](#placeProperty)
+  - [`image`](#image)
   - [`link`](#link)
   - [`folkloreLink`](#folkloreLink)
   - [`sameAs`](#sameAs)
@@ -101,6 +102,17 @@ Describes a property of a particular place.
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | Square          | string              | one                 | Specifies the extent to which the property applies to a particular place. If `all`, the property applies to the whole place. If `part`, the property only applies to some of the place. |
+
+### `image`
+
+Describes a scanned record from the Placenames Branch archive.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| FileName        | string              | one                 | The image file name.      |
+| LabelEN         | string              | none or one         | An English-language description of the image category, if known. |
+| LabelGA         | string              | none or one         | An Irish-language description of the image category, if known. |
+| Uri             | string              | one                 | The image URI.            |
 
 ### `link`
 

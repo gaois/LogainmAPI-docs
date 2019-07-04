@@ -46,7 +46,7 @@ Clients requesting a resource via the API are required to authenticate their ide
 
 Visit the Gaois Developer Hub at [gaois.ie](https://www.gaois.ie/). Log in or register to create an account and you will be able to access your unique API key.
 
-**Note:** This registration service is coming soon. In the meantime, please contact us at [logainm@dcu.ie](mailto:logainm@dcu.ie) to request or reset your API key.
+**Note:** The registration service is coming soon. In the meantime, please contact us at [logainm@dcu.ie](mailto:logainm@dcu.ie) to request or reset your API key.
 
 ### How to pass your API key
 

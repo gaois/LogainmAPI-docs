@@ -12,6 +12,7 @@ This document describes the data structure of the results made available via the
   - [`geography`](#geography)
   - [`coordinates`](#coordinates) 
   - [`gridReference`](#gridReference)
+  - [`placeProperty`](#placeProperty)
   - [`link`](#link)
   - [`folkloreLink`](#folkloreLink)
   - [`sameAs`](#sameAs)
@@ -89,9 +90,17 @@ Expresses a geographical location in terms of [Irish Grid Reference System](http
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-| Square          | stringer            | one                 | Specifies the grid square. |
+| Square          | string              | one                 | Specifies the grid square. |
 | Easting         | integer             | one                 | Specifies the easting in the square. |
 | Northing        | integer             | one                 | Specifies the northing in the square. |
+
+### `placeProperty`
+
+Describes a property of a particular place.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Square          | string              | one                 | Specifies the extent to which the property applies to a particular place. If `all`, the property applies to the whole place. If `part`, the property only applies to some of the place. |
 
 ### `link`
 

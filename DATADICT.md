@@ -155,7 +155,7 @@ Describes a property of a particular place.
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-| Square          | string              | one                 | Specifies the extent to which the property applies to a particular place. If `all`, the property applies to the whole place. If `part`, the property only applies to some of the place. |
+| Extent          | string              | one                 | Specifies the extent to which the property applies to a particular place. If `all`, the property applies to the whole place. If `part`, the property only applies to some of the place. |
 
 ### `image`
 

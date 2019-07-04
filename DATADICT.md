@@ -110,6 +110,13 @@ Describes an audio file providing an indicative pronunciation of a placename.
 
 ### `subName`
 
+A discrete name which may used in composing longer placenames.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Text            | string              | one                 | The text of the name.     |
+| Disambiguates   | boolean             | one                 | If true, this name provides some form of disambiguation in respect of the parent placename. A disambiguating `subName` might, for example, distinguish the parent placename from other, similar names. |
+
 ### `placeSummary`
 
 Summary information regarding a particular place.

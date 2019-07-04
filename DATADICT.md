@@ -9,7 +9,6 @@ This document describes the data structure of the results made available via the
 - [`place`](#place)
   - [`cluster`](#cluster)
   - [`clusterMember`](#clusterMember)
-  - [`category`](#category)
   - [`geography`](#geography)
   - [`coordinates`](#coordinates) 
   - [`gridReference`](#gridReference)
@@ -65,19 +64,6 @@ Represents a member of a `cluster`.
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | PlaceID         | integer             | one                 | The place identifier.     |
 | Category        | [`category`](#category) | none or one         | The place category. |
-
-### `category`
-
-Describes a place category.
-
-| Property name   | Type                | Cardinality         | Description               |
-| :-------------- | :------------------ | :------------------ | :------------------------ |
-| ID              | string              | one                 | The category identifier.  |
-| NameEN          | string              | none or one         | The English-language category name. |
-| NameGA          | string              | none or one         | The Irish-language category name. |
-| NamePluralEN    | string              | none or one         | The English-language category name plural form. |
-| NamePluralGA    | string              | none or one         | The Irish-language category name plural form. |
-| Count           | integer             | none or one         | The number of placenames associated with this category, if known. |
 
 ### `geography`
 
@@ -147,5 +133,16 @@ Specifies a co-reference to a particular place in data sets other than the Place
 | Uri             | string              | one                 | The URI of the external resource. |
 
 ## `category`
+
+Describes a place category. Categories encompass both [administrative units] and geographical features.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | string              | one                 | The category identifier.  |
+| NameEN          | string              | none or one         | The English-language category name. |
+| NameGA          | string              | none or one         | The Irish-language category name. |
+| NamePluralEN    | string              | none or one         | The English-language category name plural form. |
+| NamePluralGA    | string              | none or one         | The Irish-language category name plural form. |
+| Count           | integer             | none or one         | The number of placenames associated with this category, if known. |
 
 ## `glossary`

@@ -146,3 +146,13 @@ Describes a place category. Categories encompass both [administrative units](htt
 | Count           | integer             | none or one         | The number of placenames associated with this category, if known. |
 
 ## `glossary`
+
+Describes a set of related words commonly found in Irish placenames.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The glossary entry identifier.  |
+| Headword        | string              | one                 | The glossary entry headword. |
+| Translation     | string              | none or one         | An English-language translation of the glossary headword. |
+| Forms           | string              | none or one or many | Alternate spellings of the glossary headword. |
+| Count           | integer             | none or one         | The number of placenames associated with this glossary entry, if known. |

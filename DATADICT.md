@@ -32,7 +32,7 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Featured        | ISO 8601 datetime   | none or one or many | Denotes the date or dates on which this place was featured as the place of the day on the [logainm.ie](https://www.logainm.ie) website, if featured. |
 | Cluster         | [`cluster`](#cluster) | none or one | Metadata representing a group of places, of which this place is a member, that share placenames and are colocated or are proximate to each other. |
 | Placenames      | [`placename`](#placename) | one or many | One or more placenames, and associated metadata, that are given to this place. |
-| Glossary        | [`glossary`](#glossary) | none or one | Describes words commonly found in Irish placenames and which are present in placenames associated with this place. |
+| Glossary        | [`glossary`](#glossary) | none or one | Describes words commonly found in Irish placenames and that are present in placenames associated with this place. |
 | Categories        | [`category`](#category) | none or one or many | Describes the categories associated with this place. Only in exceptional cases will places have more than one category. |
 | IncludedIn      | [`placeSummary`](#placeSummary) | none or one or many | Summary information regarding the administrative units (counties, civil parishes, etc.) which include this place. |
 | Includes        | [`category`](#category) | none or one or many | Describes the place categories included within the bounds of this place. |

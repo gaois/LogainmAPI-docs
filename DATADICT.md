@@ -116,6 +116,18 @@ Provides a link to related data in an external resource.
 | Type            | string              | one                 | The external resource type. External resources include [OSI](https://www.osi.ie/), [Placenames Northern Ireland](http://www.placenamesni.org/), [Wikipedia](https://www.wikipedia.org/), [Geonames](http://www.geonames.org/), etc. |
 | Target          | string              | one                 | The link target. This may be a URI, URL, or other identifier, depending on the resource type. |
 
+#### `Type`
+
+This possible values of the link type property are as follows:
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| Geonames        | The link is a URL to a [Geonames](http://www.geonames.org/) entry. |
+| Osi             | The link is an [Ordnance Survey Ireland](https://www.osi.ie/) resource identifier. |
+| PlacenamesNi    | The link is a [Placenames Northern Ireland](http://www.placenamesni.org/) resource identifier. |
+| WikipediaEn     | The link is a URL to an English-language [Wikipedia](https://www.wikipedia.org/) entry. |
+| WikipediaGa     | The link is a URL to an Irish-language [Wikipedia](https://www.wikipedia.org/) entry. |
+
 ### `sameAs`
 
 Specifies a co-reference to a particular place in data sets other than the Placenames Database of Ireland. Consistent with OWL Web Ontology [SameAs](https://www.w3.org/TR/owl-ref/) definition.

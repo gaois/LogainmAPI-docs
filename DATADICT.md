@@ -47,9 +47,9 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Includes        | [`category`](#category) | none or one or many | Describes the place categories included within the bounds of this place. |
 | Geography       | [`geography`](#geography) | none or one | Geographical location of the place expressed in terms of latitudinal and longitudinal coordinates. |
 | GridReferences  | [`gridReference`](#gridReference) | none or one or many | Geographical location of the place expressed in terms of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates. |
-| Gaeltacht       | [`property`](#property) | none or one         | Indicates whether the place is in the Gaeltacht. |
-| PostOffice      | [`property`](#property) | none or one         | Indicates whether there is or was once a post office in this place. |
-| NorthernIreland | [`property`](#property) | none or one         | Indicates whether this place is in Northern Ireland. |
+| Gaeltacht       | [`placeProperty`](#placeProperty) | none or one         | Indicates whether the place is in the Gaeltacht. |
+| PostOffice      | [`placeProperty`](#placeProperty) | none or one         | Indicates whether there is or was once a post office in this place. |
+| NorthernIreland | [`placeProperty`](#placeProperty) | none or one         | Indicates whether this place is in Northern Ireland. |
 | Images          | [`image`](#image)   | none or one or many | Describes one or more scanned records from the Placenames Branch archive relating to this place. |
 | Resources       | [`resource`](#resource) | none or one or many | Describes one or more toponomy resources available on [logainm.ie](https://www.logainm.ie) relating to this place. |
 | Links           | [`link`](#link) | none or one or many | Provides one or more links to related data in external resources. External resources include [OSI](https://www.osi.ie/), [Placenames Northern Ireland](http://www.placenamesni.org/), [Wikipedia](https://www.wikipedia.org/), [Geonames](http://www.geonames.org/), etc. |

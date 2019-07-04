@@ -109,9 +109,9 @@ Use these query parameters to filter the results returned by the API.
 | `PlaceID`     | integer       | Filter by place identifier. For example, a `PlaceID` of `100013` returns all of the places in Donegal. |
 | `CategoryID`  | string        | Filter by place category, such as an administrative unit or geographical feature. |
 | `GlossaryID`  | integer       | Filter by glossary entry. |
-| `Gaeltacht`   | boolean       | If true, only return places which are in a designated Gaeltacht area. If false, exlude places in Gaeltacht areas from the results set. |
-| `PostOffice`  | boolean       | If true, only return places in which there is or once was a post office. If false, exlude places in which there is or once was a post office from the results set. |
-| `NorthernIreland` | boolean       | If true, only return places which are in Northern Ireland. If false, exlude places which are in Northern Ireland from the results set. |
+| `Gaeltacht`   | boolean       | If true, only return places which are in a Gaeltacht area. If false, exlude places in Gaeltacht areas from the result set. |
+| `PostOffice`  | boolean       | If true, only return places in which there is or once was a post office. If false, exlude places in which there is or once was a post office from the result set. |
+| `NorthernIreland` | boolean       | If true, only return places which are in Northern Ireland. If false, exlude places which are in Northern Ireland from the result set. |
 | `CreatedBefore` | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format. |
 | `CreatedSince` | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format. |
 | `ModifiedBefore` | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format. |

@@ -14,6 +14,7 @@ This document describes the data structure of the results made available via the
   - [`coordinates`](#coordinates) 
   - [`gridReference`](#gridReference)
   - [`link`](#link)
+  - [`folkloreLink`](#folkloreLink)
   - [`sameAs`](#sameAs)
 - [`category`](#category)
 - [`glossary`](#glossary)
@@ -126,6 +127,16 @@ This possible values of the link type property are as follows:
 | PlacenamesNi    | The link is a [Placenames Northern Ireland](http://www.placenamesni.org/) resource identifier. |
 | WikipediaEn     | The link is a URL for an English-language [Wikipedia](https://www.wikipedia.org/) entry. |
 | WikipediaGa     | The link is a URL for an Irish-language [Wikipedia](https://www.wikipedia.org/) entry. |
+
+### `folkloreLink`
+
+Provides a link to folkloric data from [dúchas.ie](https://www.duchas.ie) associated with a particular place.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Type            | string              | one                 | The external resource type. At present this will always describe resources from the Dúchas project. |
+| UriEN           | string              | one                 | The URI for the folkloric data resource (English-language interface). |
+| UriGA           | string              | one                 | The URI for the folkloric data resource (Irish-language interface). |
 
 ### `sameAs`
 

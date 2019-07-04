@@ -9,6 +9,7 @@ This document describes the data structure of the results made available via the
 - [`place`](#place)
   - [`cluster`](#cluster)
   - [`clusterMember`](#clusterMember)
+  - [`placename`](#placename)
   - [`placeSummary`](#placeSummary)
   - [`geography`](#geography)
   - [`coordinates`](#coordinates) 
@@ -69,6 +70,21 @@ Represents a member of a `cluster`.
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | PlaceID         | integer             | one                 | The place identifier.     |
 | Category        | [`category`](#category) | none or one         | The place category.      |
+
+### `placename`
+
+Describes a toponym associated with one or more places.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The placename identifier.     |
+| Language        | ISO 639-1 language code | none or one          | Indicates the language of the placename, if known. |
+| Wording         | string              | one                 | The placename itself.     |
+| Genetive        | string              | none or one         | In the case of Irish-language placenames this specifies the placename's grammatical form in the genitive case.     |
+| Main            | boolean             | one                 | If true this is the place's main/canonical name. This is only important if the place has more than one name in the same language. |
+| Acceptability   | [`acceptability`](#acceptability) | none or one         | Indicates the research and approval status of the placename. |
+| Audio           | [`audio`](#audio)   | none or one         | Describes an audio file that provides an indicative pronunciation of the placename. |
+| SubNames        | [`subName`](#subName) | none or many       | A list of two or more discrete placenames. Provided when the parent placename is composed of two more or more names that are conjoined together, e.g. [Rathgarvan or Clifden](https://www.logainm.ie/26783.aspx). |
 
 ### `placeSummary`
 

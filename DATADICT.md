@@ -134,7 +134,7 @@ Specifies a co-reference to a particular place in data sets other than the Place
 
 ## `category`
 
-Describes a place category. Categories encompass both [administrative units] and geographical features.
+Describes a place category. Categories encompass both [administrative units](https://www.logainm.ie/en/inf/help-categs) and geographical features.
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |

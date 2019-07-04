@@ -63,7 +63,7 @@ Metadata representing a group of places that share placenames and are colocated 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | FocusID         | integer             | one                 | Identifies the place that forms the 'focus' of the cluster. It may represent the place category most readily associated with a particular placename or feature the richest set of metadata among all the cluster members. |
-| Members         | [`clusterMember`](#clusterMember) | one or many         | Represents the individual places that form part of the cluster. |
+| Members         | [`clusterMember`](#clusterMember) | one or many         | Represents the individual places that make up the cluster. |
 
 ### `clusterMember`
 

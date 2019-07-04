@@ -80,7 +80,7 @@ Describes a toponym associated with one or more places.
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-| ID              | integer             | one                 | The placename identifier.     |
+| ID              | integer             | one                 | The placename identifier. |
 | Language        | ISO 639-1 language code | none or one          | Indicates the language of the placename, if known. |
 | Wording         | string              | one                 | The placename itself.     |
 | Genetive        | string              | none or one         | In the case of Irish-language placenames this specifies the placename's grammatical form in the genitive case.     |
@@ -91,7 +91,15 @@ Describes a toponym associated with one or more places.
 
 ### `acceptability`
 
-### `audo`
+Indicates the [research and approval status](https://www.logainm.ie/en/inf/help-notes) of a placename.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The acceptability status identifier. |
+| TextEN          | string              | none or one         | An English-language label describing the acceptability status. |
+| TextGA          | string              | none or one         | An Irish-language label describing the acceptability status. |
+
+### `audio`
 
 ### `subName`
 

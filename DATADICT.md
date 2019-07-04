@@ -15,6 +15,7 @@ This document describes the data structure of the results made available via the
   - [`placeProperty`](#placeProperty)
   - [`image`](#image)
   - [`resource`](#resource)
+  - [`supplier`](#supplier)
   - [`link`](#link)
   - [`folkloreLink`](#folkloreLink)
   - [`sameAs`](#sameAs)
@@ -137,6 +138,16 @@ This possible values of the `TypeID` property are as follows:
 | jpg             | A JPEG image.             |
 | pdf             | A PDF document.           |
 | zip             | A ZIP file.               |
+
+### `supplier`
+
+Metadata regarding the publisher/supplier of a toponmy resource.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The supplier identifier.  |
+| NameEN          | string              | none or one         | The supplier's English-language name. |
+| NameGA          | string              | none or one         | The supplier's Irish-language name. |
 
 ### `link`
 

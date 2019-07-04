@@ -6,8 +6,7 @@ This document describes the data structure of the results made available via the
 
 ## Contents
 
-- [Places](#places)
-  - [`place`](#place)
+- [`place`](#place)
   - [`cluster`](#cluster)
   - [`clusterMember`](#clusterMember)
   - [`category`](#category)
@@ -16,12 +15,12 @@ This document describes the data structure of the results made available via the
   - [`gridReference`](#gridReference)
   - [`link`](#link)
   - [`sameAs`](#sameAs)
+- [`category`](#category)
+- [`glossary`](#glossary)
 
-## Places
+## `place`
 
 The `place` object is at the core of the Logainm API: it represents a geographic location and includes associated toponymic, lexical, and other metadata. Queries to the API may return one or more `place` objects. The information below describes the properties of this object type.
-
-### `place`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
@@ -135,3 +134,7 @@ Specifies a co-reference to a particular place in data sets other than the Place
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | Uri             | string              | one                 | The URI of the external resource. |
+
+## `category`
+
+## `glossary`

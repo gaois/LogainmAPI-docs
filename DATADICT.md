@@ -8,9 +8,9 @@ This document describes the data structure of the results made available via the
 
 - [Places](#places)
   - [`place`](#place)
-  - [`placeCluster`](#placeCluster)
-  - [`placeClusterMember`](#placeClusterMember)
-  - [`placeCategory`](#placeCategory)
+  - [`cluster`](#cluster)
+  - [`clusterMember`](#clusterMember)
+  - [`category`](#category)
   - [`geography`](#geography)
   - [`coordinates`](#coordinates) 
   - [`gridReference`](#gridReference)
@@ -30,42 +30,42 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | Permalink       | string              | one                 | A permanent static hyperlink where a human reader can find more information about the place. This automatically redirects to the Irish or English version of the place information page. |
 | Featured        | ISO 8601 datetime   | none or one or many | Denotes the date or dates on which this place was featured as the place of the day on the [logainm.ie](https://www.logainm.ie) website, if featured. |
-| Cluster         | [`placeCluster`](#placeCluster) | none or one | Metadata representing a group of places, of which this place is a member, that share placenames and are colocated or are proximate to each other. |
+| Cluster         | [`cluster`](#cluster) | none or one | Metadata representing a group of places, of which this place is a member, that share placenames and are colocated or are proximate to each other. |
 | Placenames      | [`placename`](#placename) | one or many | One or more placenames, and associated metadata, that are given to this place. |
 | Glossary        | [`glossary`](#glossary) | none or one | Describes words commonly found in Irish placenames and which are present in placenames associated with this place. |
-| Categories        | [`placeCategory`](#placeCategory) | none or one or many | Describes the categories associated with this place. Only in exceptional cases will places have more than one category. |
+| Categories        | [`category`](#category) | none or one or many | Describes the categories associated with this place. Only in exceptional cases will places have more than one category. |
 | IncludedIn      | [`placeSummary`](#placeSummary) | none or one or many | Summary information regarding the administrative units (counties, civil parishes, etc.) which include this place. |
-| Includes        | [`placeCategory`](#placeCategory) | none or one or many | Describes the place categories included within the bounds of this place. |
+| Includes        | [`category`](#category) | none or one or many | Describes the place categories included within the bounds of this place. |
 | Geography       | [`geography`](#geography) | none or one | Geographical location of the place expressed in terms of latitudinal and longitudinal coordinates. |
 | GridReferences  | [`gridReference`](#gridReference) | none or one or many | Geographical location of the place expressed in terms of [Irish Grid Reference System](https://www.osi.ie/resources/reference-information-2/irish-grid-reference-system/) coordinates. |
-| Gaeltacht       | [`placeProperty`](#placeProperty) | none or one         | Indicates whether the place is in the Gaeltacht. |
-| PostOffice      | [`placeProperty`](#placeProperty) | none or one         | Indicates whether there is or was once a post office in this place. |
-| NorthernIreland | [`placeProperty`](#placeProperty) | none or one         | Indicates whether this place is in Northern Ireland. |
+| Gaeltacht       | [`property`](#property) | none or one         | Indicates whether the place is in the Gaeltacht. |
+| PostOffice      | [`property`](#property) | none or one         | Indicates whether there is or was once a post office in this place. |
+| NorthernIreland | [`property`](#property) | none or one         | Indicates whether this place is in Northern Ireland. |
 | Images          | [`image`](#image)   | none or one or many | Describes one or more scanned records from the Placenames Branch archive relating to this place. |
 | Resources       | [`resource`](#resource) | none or one or many | Describes one or more toponomy resources available on [logainm.ie](https://www.logainm.ie) relating to this place. |
-| Links           | [`placeLink`](#placeLink) | none or one or many | Provides one or more links to related data in external resources. External resources include [OSI](https://www.osi.ie/), [Placenames Northern Ireland](http://www.placenamesni.org/), [Wikipedia](https://www.wikipedia.org/), [Geonames](http://www.geonames.org/), etc. |
+| Links           | [`link`](#link) | none or one or many | Provides one or more links to related data in external resources. External resources include [OSI](https://www.osi.ie/), [Placenames Northern Ireland](http://www.placenamesni.org/), [Wikipedia](https://www.wikipedia.org/), [Geonames](http://www.geonames.org/), etc. |
 | Folklore        | [`folkloreLink`](#folkloreLink) | none or one or many | Provides links to folkloric data from [dúchas.ie](https://www.logainm.ie) associated with this place, if available. |
 | SameAs          | [`sameAs`](#sameAs) | none or one or many | Specifies one or more co-references to this place in data sets other than the Placenames Database of Ireland. Consistent with OWL Web Ontology [SameAs](https://www.w3.org/TR/owl-ref/) definition. |
 
-### `placeCluster`
+### `cluster`
 
 Metadata representing a group of places that share placenames and are colocated or are proximate to each other.
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | FocusID         | integer             | one                 | Identifies the place that forms the 'focus' of the cluster. It may be of the type most readily associated with a particular placename or feature the richest set of metadata among all the cluster members. |
-| Members         | [`placeClusterMember`](#placeClusterMember) | one or many         | Represents the individual places that form part of the cluster. |
+| Members         | [`clusterMember`](#clusterMember) | one or many         | Represents the individual places that form part of the cluster. |
 
-### `placeClusterMember`
+### `clusterMember`
 
-Represents a member of a `placeCluster`.
+Represents a member of a `cluster`.
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | PlaceID         | integer             | one                 | The place identifier.     |
-| Category        | [`placeCategory`](#placeCategory) | none or one         | The place category. |
+| Category        | [`category`](#category) | none or one         | The place category. |
 
-### `placeCategory`
+### `category`
 
 Describes a place category.
 

@@ -1,6 +1,6 @@
 # API Design Decisions
 
-This document outlines the rationale for most of the major design decisions involved in building the Logainm API in Q&A format.
+This document outlines the rationale for some of the major design decisions involved in building the Logainm API in Q&A format.
 
 ## 1. How did you choose the API authentication method? Why not use OAuth or another JWT-based authentication protocol?
 

@@ -11,9 +11,9 @@ Our requirements for authentication are minimal and extend only to performance a
 It is precisely this multiplicity of standards that discouraged us from taking such an approach at this stage. We were reluctant to 
 bet on a standard that may, or may not, be useful to our API consumers. We felt that, at this juncture, there was more benefit to be derived from making the data retrieval process as useful and as performant as possible, and producing high-quality and comprehensive documentation. We welcome feedback in this regard, however, and if there is reasonable demand for a particular linked data standard this is something we would consider implementing in v2.0 of the API.
 
-## 3. 
+## 3. How does the Logainm API represent the hierarchical nature of the data set?
 
-Flat vs hierachical
+Consumers of the API will have noticed that much of the Logainm data set is hierarchical in nature (e.g. townlands can be sub-units of civil parishes, which can be sub-units of baronies, which can be sub-units of counties, etc.) but that the API returns a 'flat', unnested array of `place` objects. There are several reasons for this, but again the user experience is paramount: were we to return a fully-hierarchical result sets consumers would be required to write complex recursive functions to parse the data. The result sets would also be orders of magnitude larger and have a performance impact for all concerned. We believe the current approach offers a pragmatic approach: the `includes` property of each `place` object represents that place's hierarchical antecedents while the `PlaceID` query parameter makes it easy to those sub-units included within a particular place.
 
 ## 4. What was the approach to data normali
 partially denormalised

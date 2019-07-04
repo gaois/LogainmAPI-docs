@@ -122,11 +122,11 @@ This possible values of the link type property are as follows:
 
 | Value           | Description               |
 | :-------------- | :------------------------ |
-| Geonames        | The link is a URL to a [Geonames](http://www.geonames.org/) entry. |
+| Geonames        | The link is a URL for a [Geonames](http://www.geonames.org/) entry. |
 | Osi             | The link is an [Ordnance Survey Ireland](https://www.osi.ie/) resource identifier. |
 | PlacenamesNi    | The link is a [Placenames Northern Ireland](http://www.placenamesni.org/) resource identifier. |
-| WikipediaEn     | The link is a URL to an English-language [Wikipedia](https://www.wikipedia.org/) entry. |
-| WikipediaGa     | The link is a URL to an Irish-language [Wikipedia](https://www.wikipedia.org/) entry. |
+| WikipediaEn     | The link is a URL for an English-language [Wikipedia](https://www.wikipedia.org/) entry. |
+| WikipediaGa     | The link is a URL for an Irish-language [Wikipedia](https://www.wikipedia.org/) entry. |
 
 ### `sameAs`
 

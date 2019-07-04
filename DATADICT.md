@@ -14,6 +14,7 @@ This document describes the data structure of the results made available via the
   - [`gridReference`](#gridReference)
   - [`placeProperty`](#placeProperty)
   - [`image`](#image)
+  - [`resource`](#resource)
   - [`link`](#link)
   - [`folkloreLink`](#folkloreLink)
   - [`sameAs`](#sameAs)
@@ -113,6 +114,29 @@ Describes a scanned record from the Placenames Branch archive.
 | LabelEN         | string              | none or one         | An English-language description of the image category, if known. |
 | LabelGA         | string              | none or one         | An Irish-language description of the image category, if known. |
 | Uri             | string              | one                 | The image URI.            |
+
+### `resource`
+
+Describes a toponomy resource available on [logainm.ie](https://www.logainm.ie).
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The resource identifier.  |
+| TypeID          | string              | one                 | Identifies the resource type. |
+| TitleEN         | string              | none or one         | The resource's English-language title. |
+| TitleGA         | string              | none or one         | The resource's Irish-language title. |
+| PageReference   | string              | none or one         | Specifies the page or pages within the resource associated with a particular place, if applicable. |
+| Supplier        | [`supplier`](#supplier) | none or one         | Metadata regarding the publisher/supplier of the resource. |
+
+#### `TypeID`
+
+This possible values of the `TypeID` property are as follows:
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| jpg             | A JPEG image.             |
+| pdf             | A PDF document.           |
+| zip             | A ZIP file.               |
 
 ### `link`
 

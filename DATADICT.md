@@ -231,6 +231,16 @@ This possible values of the link type property are as follows:
 | WikipediaEn     | The link is a URL for an English-language [Wikipedia](https://www.wikipedia.org/) entry. |
 | WikipediaGa     | The link is a URL for an Irish-language [Wikipedia](https://www.wikipedia.org/) entry. |
 
+### `biographyLink`
+
+Provides links to biographical data from [ainm.ie](https://www.ainm.ie) for any persons born in a particular place.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The biography's ainm.ie identifier.  |
+| Title           | string              | one                 | The biography title.      |
+| Uri             | string              | one                 | The URI for the ainm.ie biography. |
+
 ### `folkloreLink`
 
 Provides a link to folkloric data from [dúchas.ie](https://www.duchas.ie) associated with a particular place.

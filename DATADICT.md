@@ -53,6 +53,7 @@ The `place` object is at the core of the Logainm API: it represents a geographic
 | Images          | [`image`](#image)   | none or one or many | Describes one or more scanned records from the Placenames Branch archive relating to this place. |
 | Resources       | [`resource`](#resource) | none or one or many | Describes one or more toponomy resources available on [logainm.ie](https://www.logainm.ie) relating to this place. |
 | Links           | [`link`](#link) | none or one or many | Provides one or more links to related data in external resources. External resources include [OSI](https://www.osi.ie/), [Placenames Northern Ireland](http://www.placenamesni.org/), [Wikipedia](https://www.wikipedia.org/), [Geonames](http://www.geonames.org/), etc. |
+| BornHere        | [`biographyLink`](#biographyLink) | Provides links to biographical data from [ainm.ie](https://www.ainm.ie) for any persons born in this place, if available. |
 | Folklore        | [`folkloreLink`](#folkloreLink) | none or one or many | Provides links to folkloric data from [dúchas.ie](https://www.logainm.ie) associated with this place, if available. |
 | SameAs          | [`sameAs`](#sameAs) | none or one or many | Specifies one or more co-references to this place in data sets other than the Placenames Database of Ireland. Consistent with OWL Web Ontology [SameAs](https://www.w3.org/TR/owl-ref/) definition. |
 

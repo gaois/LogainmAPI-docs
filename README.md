@@ -110,6 +110,9 @@ Use these query parameters to filter the results returned by the API.
 | `CategoryID`  | string        | Filter by place category identifier, such as an administrative unit or geographical feature. |
 | `GlossaryID`  | integer       | Filter by glossary entry identifier. |
 | `ExcludeStreets` | boolean       | If true, exclude places with a `CategoryID` of `SR` (streets) from the result set. Streets can add greatly to the size of the result set and, consequently, the response time when querying places that contain large urban areas. |
+| `Latitude`    | float         | Filter by latitudinal coordinate. Must be used in conjunction with a `Longitude` value. |
+| `Longitude`   | float         | Filter by longitudinal coordinate. Must be used in conjunction with a `Latitude` value. |
+| `Radius`      | integer       | Specifies the radius size for a geographic query in metres. The maximum radius is 15km. Defaults to 3000 metres. |
 | `Gaeltacht`   | boolean       | If true, only return places which are in a Gaeltacht area. If false, exlude places in Gaeltacht areas from the result set. |
 | `PostOffice`  | boolean       | If true, only return places in which there is or once was a post office. If false, exlude places in which there is or once was a post office from the result set. |
 | `NorthernIreland` | boolean       | If true, only return places which are in Northern Ireland. If false, exlude places which are in Northern Ireland from the result set. |

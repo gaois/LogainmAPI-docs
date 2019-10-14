@@ -16,7 +16,7 @@
 
 ## Introduction
 
-The Placenames Database of Ireland was created by [Fiontar & Scoil na Gaeilge](https://www.dcu.ie/fiontar_scoilnagaeilge/gaeilge/index.shtml) in collaboration with [The Placenames Branch](https://www.chg.gov.ie/gaeltacht/the-irish-language/the-placenames-branch/) (Department of Culture, Heritage and the Gaeltacht). This is a comprehensive management system for data, archival records and placenames research conducted by the State. It is a public resource for Irish people at home and abroad, and for all those who appreciate the rich heritage of Irish placenames. The database has been accessible via the [logainm.ie](https://www.logainm.ie) public website since 2008. This documentation describes a web-based Application Programming Interface (API) that exposes the database contents to programmatic queries. A [data dictionary](https://github.com/gaois/LogainmAPI-docs/blob/master/DATADICT.md) is available to assist users in parsing results returned by the API.
+The Placenames Database of Ireland was created by the Gaois research group at [Fiontar & Scoil na Gaeilge](https://www.dcu.ie/fiontar_scoilnagaeilge/gaeilge/index.shtml) in collaboration with [The Placenames Branch](https://www.chg.gov.ie/gaeltacht/the-irish-language/the-placenames-branch/) (Department of Culture, Heritage and the Gaeltacht). This is a comprehensive management system for data, archival records and placenames research conducted by the State. It is a public resource for Irish people at home and abroad, and for all those who appreciate the rich heritage of Irish placenames. The database has been accessible via the [logainm.ie](https://www.logainm.ie) public website since 2008. This documentation describes a web-based Application Programming Interface (API) that exposes the database contents to programmatic queries. A [data dictionary](https://github.com/gaois/LogainmAPI-docs/blob/master/DATADICT.md) is available to assist users in parsing results returned by the API.
 
 ## API overview
 
@@ -28,7 +28,7 @@ Users or applications (clients) requesting a resource via the API must authentic
 
 ## API versioning
 
-Multiple API versions are facilitated. This is to say, more than one version of the API may be accessible at the same time. Newer API versions may offer additional resources or functionalities but may require a different request syntax to older versions. The target API version is indicated by the second path parameter in the request URL:
+Multiple API versions are facilitated. This is to say more than one version of the API may be accessible at the same time. Newer API versions may offer additional resources or functionalities but may require a different request syntax to older versions. The target API version is indicated by the second path parameter in the request URL:
 
 > /api/**v0.5**/glossary
 
@@ -112,6 +112,7 @@ Use these query parameters to filter the results returned by the API.
 | `ExcludeStreets` | boolean       | If true, exclude places with a `CategoryID` of `SR` (streets) from the result set. Streets can add greatly to the size of the result set and, consequently, the response time when querying places that contain large urban areas. |
 | `Latitude`    | float         | Filter by latitudinal coordinate. Must be used in conjunction with a `Longitude` value. |
 | `Longitude`   | float         | Filter by longitudinal coordinate. Must be used in conjunction with a `Latitude` value. |
+| `Accurate`    | boolean       | If true, only return places whose geographic coordinates are believed to be precise. If false, only return places whose geographic coordinates been obtained by extrapolation from neighbouring places. |
 | `Radius`      | integer       | Specifies the radius size for a geographic query in metres. The maximum radius is 15km. Defaults to 3000 metres. |
 | `Gaeltacht`   | boolean       | If true, only return places which are in a Gaeltacht area. If false, exlude places in Gaeltacht areas from the result set. |
 | `PostOffice`  | boolean       | If true, only return places in which there is or once was a post office. If false, exlude places in which there is or once was a post office from the result set. |

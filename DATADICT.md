@@ -31,8 +31,7 @@ This document describes the data structure of the results made available via the
 
 ## `placeList`
 
-Queries to the API
-will return a `placeList` object
+Most API queries will return a `placeList` object. This contains a list of one or places, if found, and additional metadata related to the query.
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |

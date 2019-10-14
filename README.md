@@ -126,7 +126,7 @@ Use these query parameters to filter the results returned by the API.
 
 ## Sorting
 
-Where data relating to more than one place are returned in response to a query they are sorted by place identifier, in ascending order. The only exception to this are geographic queries, where the `Latitude` and `Longitude` query parameters are specified, in which case case places are listed in order of proximity to the specified coordinates, with the nearest places first.
+Where data relating to more than one place are returned in response to a query they are sorted by place identifier, in ascending order. The only exception to this are geographic queries, where the `Latitude` and `Longitude` query parameters are specified, in which case case places are listed in order of proximity to the specified coordinates, with the nearest places listed first.
 
 ## Illustrative examples
 
@@ -136,9 +136,11 @@ Below is a non-exhaustive list of valid API request URLs, provided for demonstra
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100009&CategoryID=PAR`
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100002&ModifiedSince=2019-01-01`
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100001&CategoryID=SRB&ModifiedSince=2017-01-01`
+- `https://www.logainm.ie/api/v0.5/?Latitude=53.3693445&Longitude=-6.271958104774972&Radius=10000&CategoryID=PAR`
 - `https://www.logainm.ie/api/v0.5/?GlossaryID=58`
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100024&Gaeltacht=true`
 - `https://www.logainm.ie/api/v0.5/?PlaceID=100010&ExcludeStreets=true`
+- `https://www.logainm.ie/api/v0.5/?Query=Carrick&PlaceID=100029`
 - `https://www.logainm.ie/api/v0.5/1412322`
 - `https://www.logainm.ie/api/v0.5/1411548`
 - `https://www.logainm.ie/api/v0.5/14448`

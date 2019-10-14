@@ -106,7 +106,7 @@ Use these query parameters to filter the results returned by the API.
 
 | Name          | Type          | Description    |
 | :------------ | :------------ | :------------- |
-| `PlaceID`     | integer       | Filter by place identifier. For example, a `PlaceID` of `100013` returns all of the places in Donegal. |
+| `PlaceID`     | integer       | Filter by place identifier. For example, a `PlaceID` of `100013` returns all of the places in County Donegal. |
 | `CategoryID`  | string        | Filter by place category identifier, such as an administrative unit or geographical feature. |
 | `GlossaryID`  | integer       | Filter by glossary entry identifier. |
 | `ExcludeStreets` | boolean       | If true, exclude places with a `CategoryID` of `SR` (streets) from the result set. Streets can add greatly to the size of the result set and, consequently, the response time when querying places that contain large urban areas. |
@@ -114,6 +114,7 @@ Use these query parameters to filter the results returned by the API.
 | `Longitude`   | float         | Filter by longitudinal coordinate. Must be used in conjunction with a `Latitude` value. |
 | `Accurate`    | boolean       | If true, only return places whose geographic coordinates are believed to be precise. If false, only return places whose geographic coordinates been obtained by extrapolation from neighbouring places. |
 | `Radius`      | integer       | Specifies the radius size for a geographic query in metres. The maximum radius is 15km. Defaults to 3000 metres. |
+| `Query`       | string        | Filter by search term(s). Textual searches are accent sensitive; for example, the search terms 'Rath' and 'Ráth' each return different sets of results. Note that textual searches currently only retrieve exact matches for query terms. |
 | `Gaeltacht`   | boolean       | If true, only return places which are in a Gaeltacht area. If false, exlude places in Gaeltacht areas from the result set. |
 | `PostOffice`  | boolean       | If true, only return places in which there is or once was a post office. If false, exlude places in which there is or once was a post office from the result set. |
 | `NorthernIreland` | boolean       | If true, only return places which are in Northern Ireland. If false, exlude places which are in Northern Ireland from the result set. |

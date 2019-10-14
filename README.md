@@ -113,7 +113,7 @@ Use these query parameters to filter the results returned by the API.
 | `ExcludeStreets` | boolean       | If true, exclude places with a `CategoryID` of `SR` (streets) from the result set. Streets can add greatly to the size of the result set and, consequently, the response time when querying places that contain large urban areas. |
 | `Latitude`    | float         | Filter by latitudinal coordinate. Must be used in conjunction with a `Longitude` value. |
 | `Longitude`   | float         | Filter by longitudinal coordinate. Must be used in conjunction with a `Latitude` value. |
-| `Accurate`    | boolean       | If true, only return places whose geographic coordinates are believed to be precise. If false, only return places whose geographic coordinates been obtained by extrapolation from neighbouring places. |
+| `Accurate`    | boolean       | If true, only return places whose geographic coordinates are believed to be precise. If false, only return places whose geographic coordinates were obtained by extrapolation from neighbouring places. |
 | `Radius`      | integer       | Specifies the radius size for a geographic query in metres. The maximum radius is 15km. Defaults to 3000 metres. |
 | `Query`       | string        | Filter by search term(s). Textual searches are accent sensitive; for example, the search terms 'Rath' and 'Ráth' each return different sets of results. Note that textual searches currently only retrieve exact matches for query terms. Partial or speculative matches may be detailed in the `SimilarNames` response field. |
 | `Gaeltacht`   | boolean       | If true, only return places which are in a Gaeltacht area. If false, exlude places in Gaeltacht areas from the result set. |

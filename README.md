@@ -10,9 +10,10 @@
 4. [API authentication](#api-authentication)
 5. [Security](#security)
 6. [Resource paths](#resource-paths)
-7. [Illustrative examples](#illustrative-examples)
-8. [HTTP status codes](#http-status-codes)
-9. [Data retention and data protection](#data-retention-and-data-protection)
+7. [Sorting](#sorting)
+8. [Illustrative examples](#illustrative-examples)
+9. [HTTP status codes](#http-status-codes)
+10. [Data retention and data protection](#data-retention-and-data-protection)
 
 ## Introduction
 
@@ -122,6 +123,10 @@ Use these query parameters to filter the results returned by the API.
 | `CreatedSince` | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format. |
 | `ModifiedBefore` | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format. |
 | `ModifiedSince` | ISO 8601 datetime | Retrieve records last updated after a given date in `YYYY-MM-DD` format. |
+
+## Sorting
+
+Where data relating to more than one place are returned in response to a query they are sorted by place identifier, in ascending order. The only exception to this are geographic queries, where the `Latitude` and `Longitude` query parameters are specified, in which case case places are listed in order of proximity to the specified coordinates, with the nearest places first.
 
 ## Illustrative examples
 

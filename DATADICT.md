@@ -28,6 +28,15 @@ This document describes the data structure of the results made available via the
 - [`category`](#category)
 - [`glossary`](#glossary)
 
+## `placeList`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| TotalCount      | integer             | one                 | The total count of place records retrieved. |
+| Places          | [place](#place)     | none or one or many | The retrieved place records. |
+| SimilarNames    | string              | none or one or many | A set of names which have a similar spelling to the query text (if performing a textual search). For example, if searching for 'Ballybunion', 'Ballybunnion' will be suggested. |
+| RelatedNames    | string              | none or one or many | A set of names which are related to the query text (if performing a textual search). For example, if searching for 'Lismore', the list of related names will suggest 'Lismore and Mocollop', 'Lismore Demesne', agus 'Lismore Road'. |
+
 ## `place`
 
 The `place` object is at the core of the Logainm API: it represents a geographic location and includes associated toponymic, lexical, and other metadata. Queries to the API may return one or more `place` objects. The information below describes the properties of this object type.

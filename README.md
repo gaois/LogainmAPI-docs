@@ -1,4 +1,4 @@
-# Logainm Application Programming Interface (Version 0.5): Developer documentation
+# Logainm Application Programming Interface (Version 0.9): Developer documentation
 
 **Note:** This documentation describes a **prerelease** version of the Logainm API. Features are being added on an ongoing basis. The documentation will be revised in advance of the v1.0 release.
 
@@ -23,7 +23,7 @@ The Placenames Database of Ireland was created by the Gaois research group at [F
 
 The Logainm API provides access to a number of resources by means of a defined URL schema. Specific resources are accessed via unique paths appended to the main website host. In some cases the resources that are returned may be filtered using optional query parameters. Attempts to access a resource provided by the API are referred to as requests. Following a successful request, resources are returned in the form of JSON. An unsuccessful attempt to access a resource will receive, at a minimum, a relevant HTTP status code in response to the request. An example of a valid request to the API is as follows:
 
-> `https://www.logainm.ie/api/v0.5/1375542`
+> `https://www.logainm.ie/api/v0.9/1375542`
 
 Users or applications (clients) requesting a resource via the API must authenticate their identity. This is achieved by providing an API key with each request. Each client must obtain a unique API key prior to interacting with the interface. Authentication is required to prevent abuse of the service and to track general usage statistics. Further details are provided below.
 
@@ -31,7 +31,7 @@ Users or applications (clients) requesting a resource via the API must authentic
 
 Multiple API versions are facilitated. This is to say more than one version of the API may be accessible at the same time. Newer API versions may offer additional resources or functionalities but may require a different request syntax to older versions. The target API version is indicated by the second path parameter in the request URL:
 
-> /api/**v0.5**/glossary
+> /api/**v0.9**/glossary
 
 Older versions will be supported for developer convenience: without versioning, frequent changes to API syntax might cause dependent client applications to malfunction. We will endeavour to add new resources incrementally and will implement breaking changes only as a last resort. The API is versioned using [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) (semver) and follows the semver specification. For brevity, however, only major and minor version points are reflected in request URLs.
 
@@ -57,13 +57,13 @@ Your API key may be passed to the service in a few different ways. Choose whiche
 
 Pass the API key into an `X-Api-Key` header:
 
-> `'X-Api-Key: <API_KEY_HERE>' 'https://www.logainm.ie/api/v0.5/1384618'`
+> `'X-Api-Key: <API_KEY_HERE>' 'https://www.logainm.ie/api/v0.9/1384618'`
 
 #### GET query parameter
 
 Pass the API key into an `apiKey` GET query string parameter:
 
-> `'https://www.logainm.ie/api/v0.5/1384618?apiKey=API_KEY_HERE'`
+> `'https://www.logainm.ie/api/v0.9/1384618?apiKey=API_KEY_HERE'`
 
 **Note:** The GET query parameter may be used for non-GET requests (such as POST and PUT).
 
@@ -71,7 +71,7 @@ Pass the API key into an `apiKey` GET query string parameter:
 
 As an alternative, pass the API key as the username (with an empty password) using HTTP basic authentication:
 
-> `'https://API_KEY_HERE@www.logainm.ie/api/v0.5/1384618'`
+> `'https://API_KEY_HERE@www.logainm.ie/api/v0.9/1384618'`
 
 ## Security
 
@@ -86,14 +86,14 @@ The resources provided by the API are accessed via unique paths appended to the 
 | Method      | Path                          | Resource                  |
 | :---------- | :---------------------------- | :------------------------ |
 | GET         | `/api`                        | General API metadata.     |
-| GET         | `/api/v0.5`                   | List of places and associated metadata.**\*** |
-| GET         | `/api/v0.5/{id}`              | Metadata associated with an individual place. |
-| GET         | `/api/v0.5/administrative-units` | Reference list of metadata associated with [Irish administrative units](https://www.logainm.ie/en/inf/help-categs). The unit identifers in this list can be used to filter places by `CategoryID`. |
-| GET         | `/api/v0.5/features`          | Reference list of metadata associated with geographical features. The feature identifers in this list can be used to filter places by `CategoryID`. |
-| GET         | `/api/v0.5/glossary`          | Reference list of [words commonly found in Irish placenames](https://www.logainm.ie/en/gls/) and associated metadata. The glossary identifers in this list can be used to filter places by `GlossaryID`. |
-| GET         | `/api/v0.5/counties`          | Reference list of metadata associated with counties. The place identifiers in this list can be used to filter places by `PlaceID`. |
+| GET         | `/api/v0.9`                   | List of places and associated metadata.**\*** |
+| GET         | `/api/v0.9/{id}`              | Metadata associated with an individual place. |
+| GET         | `/api/v0.9/administrative-units` | Reference list of metadata associated with [Irish administrative units](https://www.logainm.ie/en/inf/help-categs). The unit identifers in this list can be used to filter places by `CategoryID`. |
+| GET         | `/api/v0.9/features`          | Reference list of metadata associated with geographical features. The feature identifers in this list can be used to filter places by `CategoryID`. |
+| GET         | `/api/v0.9/glossary`          | Reference list of [words commonly found in Irish placenames](https://www.logainm.ie/en/gls/) and associated metadata. The glossary identifers in this list can be used to filter places by `GlossaryID`. |
+| GET         | `/api/v0.9/counties`          | Reference list of metadata associated with counties. The place identifiers in this list can be used to filter places by `PlaceID`. |
 
-**\*** Requests to the `/api/v0.5/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `CategoryID`, or `GlossaryID`.
+**\*** Requests to the `/api/v0.9/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `CategoryID`, or `GlossaryID`.
 
 ### URL path parameters
 
@@ -132,26 +132,26 @@ Where data relating to more than one place are returned in response to a query t
 
 Below is a non-exhaustive list of valid API request URLs, provided for demonstration purposes:
 
-- `https://www.logainm.ie/api/v0.5/?PlaceID=100013`
-- `https://www.logainm.ie/api/v0.5/?PlaceID=100009&CategoryID=PAR`
-- `https://www.logainm.ie/api/v0.5/?PlaceID=100002&ModifiedSince=2019-01-01`
-- `https://www.logainm.ie/api/v0.5/?PlaceID=100001&CategoryID=SRB&ModifiedSince=2017-01-01`
-- `https://www.logainm.ie/api/v0.5/?Latitude=53.3693445&Longitude=-6.271958104774972&Radius=10000&CategoryID=PAR`
-- `https://www.logainm.ie/api/v0.5/?GlossaryID=58`
-- `https://www.logainm.ie/api/v0.5/?PlaceID=100024&Gaeltacht=true`
-- `https://www.logainm.ie/api/v0.5/?PlaceID=100010&ExcludeStreets=true`
-- `https://www.logainm.ie/api/v0.5/?Query=Carrick&PlaceID=100029`
-- `https://www.logainm.ie/api/v0.5/1412322`
-- `https://www.logainm.ie/api/v0.5/1411548`
-- `https://www.logainm.ie/api/v0.5/14448`
-- `https://www.logainm.ie/api/v0.5/1384618`
-- `https://www.logainm.ie/api/v0.5/26783`
-- `https://www.logainm.ie/api/v0.5/1375542`
-- `https://www.logainm.ie/api/v0.5/2425`
-- `https://www.logainm.ie/api/v0.5/administrative-units/`
-- `https://www.logainm.ie/api/v0.5/features/`
-- `https://www.logainm.ie/api/v0.5/glossary/`
-- `https://www.logainm.ie/api/v0.5/counties/`
+- `https://www.logainm.ie/api/v0.9/?PlaceID=100013`
+- `https://www.logainm.ie/api/v0.9/?PlaceID=100009&CategoryID=PAR`
+- `https://www.logainm.ie/api/v0.9/?PlaceID=100002&ModifiedSince=2019-01-01`
+- `https://www.logainm.ie/api/v0.9/?PlaceID=100001&CategoryID=SRB&ModifiedSince=2017-01-01`
+- `https://www.logainm.ie/api/v0.9/?Latitude=53.3693445&Longitude=-6.271958104774972&Radius=10000&CategoryID=PAR`
+- `https://www.logainm.ie/api/v0.9/?GlossaryID=58`
+- `https://www.logainm.ie/api/v0.9/?PlaceID=100024&Gaeltacht=true`
+- `https://www.logainm.ie/api/v0.9/?PlaceID=100010&ExcludeStreets=true`
+- `https://www.logainm.ie/api/v0.9/?Query=Carrick&PlaceID=100029`
+- `https://www.logainm.ie/api/v0.9/1412322`
+- `https://www.logainm.ie/api/v0.9/1411548`
+- `https://www.logainm.ie/api/v0.9/14448`
+- `https://www.logainm.ie/api/v0.9/1384618`
+- `https://www.logainm.ie/api/v0.9/26783`
+- `https://www.logainm.ie/api/v0.9/1375542`
+- `https://www.logainm.ie/api/v0.9/2425`
+- `https://www.logainm.ie/api/v0.9/administrative-units/`
+- `https://www.logainm.ie/api/v0.9/features/`
+- `https://www.logainm.ie/api/v0.9/glossary/`
+- `https://www.logainm.ie/api/v0.9/counties/`
 
 ## HTTP status codes
 

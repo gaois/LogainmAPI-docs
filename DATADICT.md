@@ -1,4 +1,4 @@
-# Logainm Application Programming Interface (Version 0.5): Data dictionary
+# Logainm Application Programming Interface (Version 0.9): Data dictionary
 
 **Note:** This documentation describes a **prerelease** version of the Logainm API. Features are being added on an ongoing basis. The documentation will be revised in advance of the v1.0 release.
 

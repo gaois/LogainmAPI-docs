@@ -93,7 +93,7 @@ The resources provided by the API are accessed via unique paths appended to the 
 | GET         | `/api/v0.9/glossary`          | Reference list of [words commonly found in Irish placenames](https://www.logainm.ie/en/gls/) and associated metadata. The glossary identifers in this list can be used to filter places by `GlossaryID`. |
 | GET         | `/api/v0.9/counties`          | Reference list of metadata associated with counties. The place identifiers in this list can be used to filter places by `PlaceID`. |
 
-**\*** Requests to the `/api/v0.9/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `CategoryID`, or `GlossaryID`.
+**\*** Requests to the `/api/v0.9/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `CategoryID`, `GlossaryID`, or a pair of `Longitude` and `Latitude` parameters.
 
 ### URL path parameters
 

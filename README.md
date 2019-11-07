@@ -114,7 +114,7 @@ Use these query parameters to filter the results returned by the API.
 | `Latitude`    | float         | Filter by latitudinal coordinate. Must be used in conjunction with a `Longitude` value. |
 | `Longitude`   | float         | Filter by longitudinal coordinate. Must be used in conjunction with a `Latitude` value. |
 | `Accurate`    | boolean       | If true, only return places whose geographic coordinates are believed to be precise. If false, only return places whose geographic coordinates were obtained by extrapolation from neighbouring places. |
-| `Radius`      | integer       | Specifies the radius size for a geographic query in metres. The maximum radius is 15km. Defaults to 3000 metres. |
+| `Radius`      | integer       | Specifies the radius size for a geographic query in metres. The maximum radius is 15000. Defaults to 3000 metres. |
 | `Query`       | string        | Filter by search term(s). Textual searches are accent sensitive; for example, the search terms 'Rath' and 'Ráth' each return different sets of results. Note that textual searches currently only retrieve exact matches for query terms. Partial or speculative matches may be detailed in the `SimilarNames` response field. |
 | `Gaeltacht`   | boolean       | If true, only return places which are in a Gaeltacht area. If false, exlude places in Gaeltacht areas from the result set. |
 | `PostOffice`  | boolean       | If true, only return places in which there is or once was a post office. If false, exlude places in which there is or once was a post office from the result set. |

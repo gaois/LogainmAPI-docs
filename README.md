@@ -93,7 +93,7 @@ The resources provided by the API are accessed via unique paths appended to the 
 | GET         | `/api/v0.9/glossary`          | Reference list of [words commonly found in Irish placenames](https://www.logainm.ie/en/gls/) and associated metadata. The glossary identifers in this list can be used to filter places by `GlossaryID`. |
 | GET         | `/api/v0.9/counties`          | Reference list of metadata associated with counties. The place identifiers in this list can be used to filter places by `PlaceID`. |
 
-**\*** Requests to the `/api/v0.9/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `CategoryID`, `GlossaryID`, or a pair of `Longitude` and `Latitude` parameters.
+**\*** Requests to the `/api/v0.9/` endpoint must be filtered by at least one of the following parameters: `PlaceID`, `CategoryID`, `GlossaryID`, `Page`, `Query`, or a pair of `Latitude` and `Longitude` parameters.
 
 ### URL path parameters
 
@@ -111,6 +111,8 @@ Use these query parameters to filter the results returned by the API.
 | `CategoryID`  | string        | Filter by place category identifier, such as an administrative unit or geographical feature. |
 | `GlossaryID`  | integer       | Filter by glossary entry identifier. |
 | `ExcludeStreets` | boolean       | If true, exclude places with a `CategoryID` of `SR` (streets) from the result set. Streets can add greatly to the size of the result set and, consequently, the response time when querying places that include large urban areas. |
+| `Page`        | integer       | If specified, causes the result set to be paginated. The value represents the current page number. Page numbers start at one (i.e. pages are not zero indexed). If no `PerPage` parameter is specified the count of results per page defaults to the maximum 1000. |
+| `PerPage`     | integer       | The count of results to be returned per page in a paginated query. Defaults to 1000. The maximum value allowed is 1000. |
 | `Latitude`    | float         | Filter by latitudinal coordinate. Must be used in conjunction with a `Longitude` value. |
 | `Longitude`   | float         | Filter by longitudinal coordinate. Must be used in conjunction with a `Latitude` value. |
 | `Accurate`    | boolean       | If true, only return places whose geographic coordinates are believed to be precise. If false, only return places whose geographic coordinates were obtained by extrapolation from neighbouring places. |

@@ -134,14 +134,14 @@ Where data relating to more than one place are returned in response to a query t
 
 Below is a non-exhaustive list of valid API request URLs, provided for demonstration purposes:
 
-- `https://www.logainm.ie/api/v0.9/?PlaceID=100013`
+- `https://www.logainm.ie/api/v0.9/?PlaceID=100013&Page=1&PerPage=500`
 - `https://www.logainm.ie/api/v0.9/?PlaceID=100009&CategoryID=PAR`
-- `https://www.logainm.ie/api/v0.9/?PlaceID=100002&ModifiedSince=2019-01-01`
+- `https://www.logainm.ie/api/v0.9/?PlaceID=100002&ModifiedSince=2019-01-01&Page=1`
 - `https://www.logainm.ie/api/v0.9/?PlaceID=100001&CategoryID=SRB&ModifiedSince=2017-01-01`
 - `https://www.logainm.ie/api/v0.9/?Latitude=53.3693445&Longitude=-6.271958104774972&Radius=10000&CategoryID=PAR`
 - `https://www.logainm.ie/api/v0.9/?GlossaryID=58`
 - `https://www.logainm.ie/api/v0.9/?PlaceID=100024&Gaeltacht=true`
-- `https://www.logainm.ie/api/v0.9/?PlaceID=100010&ExcludeStreets=true`
+- `https://www.logainm.ie/api/v0.9/?PlaceID=100010&ExcludeStreets=true&Page=1`
 - `https://www.logainm.ie/api/v0.9/?Query=Carrick&PlaceID=100029`
 - `https://www.logainm.ie/api/v0.9/1412322`
 - `https://www.logainm.ie/api/v0.9/1411548`

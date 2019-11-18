@@ -36,6 +36,9 @@ Most API queries will return a `placeList` object. This contains a list of one o
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | TotalCount      | integer             | one                 | The total count of place records retrieved. |
+| TotalPages      | integer             | none or one         | If the place list is paginated, the total number of pages in the result set. |
+| CurrentPage     | integer             | none or one         | If the place list is paginated, the current page number. |
+| CountPerPage    | integer             | none or one         | If the place list is paginated, the maximum count of results returned per page. |
 | Places          | [`place`](#place)     | none or one or many | The retrieved place records. |
 | SimilarNames    | string              | none or one or many | A set of names which have a similar spelling to the query text (if performing a textual search). For example, if searching for 'Ballybunion', 'Ballybunnion' will be suggested. |
 | RelatedNames    | string              | none or one or many | A set of names which are related to the query text (if performing a textual search). For example, if searching for 'Lismore', the list of related names will suggest 'Lismore and Mocollop', 'Lismore Demesne', agus 'Lismore Road'. |

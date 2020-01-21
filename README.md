@@ -1,6 +1,6 @@
 # Logainm Application Programming Interface (Version 0.9): Developer documentation
 
-***Please see [docs.gaois.ie](https://docs.gaois.ie) for the latest documentation in respect of the Logainm API. This repository is no longer being actively maintained. It is retained, however, for archival purposes.***
+***Please see [docs.gaois.ie](https://docs.gaois.ie) for the latest documentation in respect of the Logainm API. This repository is no longer being actively maintained. It will be preserved, however, for archival purposes.***
 
 **Note:** This documentation describes a **prerelease** version of the Logainm API. Features are being added on an ongoing basis. The documentation will be revised in advance of the v1.0 release.
 
